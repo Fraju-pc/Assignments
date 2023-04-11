@@ -70,28 +70,29 @@ const isPassing = (currentValue) => currentValue >= 70;
 console.log("\n\nStudent: " + fullName);
 console.log("Grades: ");
 for (let i = 0; i < gradesArray.length; i++) { 
-console.log("\t" + (i+1) + ": " + gradesArray[i]);
+    console.log("\t" + (i+1) + ": " + gradesArray[i]);
 }
 console.log("Evaluation: ");
 
 if (gradesArray.every(isPassing)) {
-console.log('\tEvery grade is a passing grade (>= 70)!');
+    console.log('\tEvery grade is a passing grade (>= 70)!');
 } else {
-console.log('\tNot all grades are passing.  A passing grade is >= 70!');
+    console.log('\tNot all grades are passing.  A passing grade is >= 70!');
 }
  //same example with lower grade pushed in
 gradesArray.push(55);
 console.log("\n\nStudent: " + fullName);
 console.log("Grades: ");
+
 for (let i = 0; i < gradesArray.length; i++) { 
-console.log("\t" + (i+1) + ": " + gradesArray[i]);
+    console.log("\t" + (i+1) + ": " + gradesArray[i]);
 }
 console.log("Evaluation: ");
 
 if (gradesArray.every(isPassing)) {
-console.log('\tEvery grade is a passing grade (>= 70)!');
+    console.log('\tEvery grade is a passing grade (>= 70)!');
 } else {
-console.log('\tNot all grades are passing.  A passing grade is >= 70!');
+    console.log('\tNot all grades are passing.  A passing grade is >= 70!');
 }
 
 //end of code
