@@ -163,36 +163,45 @@ const matchingCustomers = (custArray) => {
     
     // name starts with a 'C' -- convert to uppercase for comparison
     if((customer.name.charAt(0).toUpperCase() == 'C')
-    
      ||
-    
     // address contains no undefined fields
-         (  (customer.address.street !== undefined) 
+         ((customer.address.street !== undefined) 
     && (customer.address.city !== undefined)
     && (customer.address.zip  !== undefined)
-    && (customer.address.state  !== undefined) )
-    
+    && (customer.address.state  !== undefined))
      ||
-    
     // the city is Peoria and the state is AZ
-        (  ( customer.address.city == 'Peoria')  &&   (customer.address.state == 'AZ') )
-    
+        (( customer.address.city == 'Peoria')  &&   (customer.address.state == 'AZ'))
      ||
-    
     // membership level is GOLD or PLATINUM unless the customer is younger than 29, then SILVER is okay too
-         (  (customer.membershipLevel =="GOLD")
-    || ( customer.membershipLevel == "PLATINUM")
-    || ( ( customer.membershipLevel == "SILVER")   &&   ( customer.age < 29) ) )
+        ((customer.membershipLevel =="GOLD")
+        || (customer.membershipLevel == "PLATINUM")
+        || (( customer.membershipLevel == "SILVER")   &&   ( customer.age < 29) ))
     
-     ) {
+        ) {
     resultArray.push(customer);
-    } else {
-    console.log(`${customer.name} doesn't fit criteria!`);
-    }
-    }
+        } 
+        else {
+            console.log(`${customer.name} doesn't fit criteria!`);
+            }
+        }
     return resultArray;
     }
     
     console.log(matchingCustomers(customers));
+let array = [5,5,5];
 
+    function doesArrayHaveValue(array, val) {
+        for(let i = 0; i < array.length; i++) {
+            if(array[i] === val) {
+                return true
+            }
+        }
+        return false
+    }
 
+    console.log(doesArrayHaveValue( array, 5));
+
+    const found = array.find(element => element > 5);
+
+console.log(found);

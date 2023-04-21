@@ -224,5 +224,34 @@ let moneyInPocket = 11.00;
 //invoke fucntion and console.log result
 console.log(willBuyDrink(isHotOutside, moneyInPocket));
 
-//13.	Create a function of your own that solves a problem.   
+//13.	Create a function of your own that solves a problem.  
 console.log("13.	Create a function of your own that solves a problem.   ");
+
+//My kids love to play video games and it is a very common question every afternoon after school.
+//However they all know that there are certain responisibilties that need to be handled first.
+//Kids being kids they try to get around it, so I have written a simple program that will only 
+//allow them to play if all of the conditions are met.
+
+//prompt user for input
+let washedHands = prompt(`Did you wash your hands?`);
+let backPackEmptied = prompt(`Did you take everything out of your back pack?`);
+let homeWorkDone = prompt(`Did you finish your homework?`);
+let hadSnack = prompt(`Did you have a healthy snack?`);
+
+//put data into array
+let questions = [washedHands, backPackEmptied, homeWorkDone, hadSnack];
+//console.log(questions)
+
+//init functions
+const isYes = (answer) => answer ==`yes`;
+
+const canPlayVideoGames = (arr12) =>{
+    //check if all elements in the array are equal to yes
+    if(arr12.every(isYes) == true){
+        return `Yes! You can Play video games!`
+    }
+return `No! You cannot play video games, takd care of your responsibilities first!`
+};
+
+//invoke fucntion and console.log result
+console.log(canPlayVideoGames(questions));
