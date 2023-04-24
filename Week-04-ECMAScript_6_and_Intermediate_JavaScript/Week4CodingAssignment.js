@@ -170,7 +170,7 @@ const checkForOneHundred = (arr8) => {
     return false;
 }
 //invoke fucntion and console.log result
-console.log(checkForOneHundred(ages));
+console.log(checkForOneHundred(nameLengths));
 
 //10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.
 console.log("10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.");
@@ -204,7 +204,7 @@ const compareArrayAvg = (arr10, arr11) => {
     return false;
 }
 //invoke fucntion and console.log result
-console.log(compareArrayAvg(nameLengths, ages));
+console.log(compareArrayAvg(ages, nameLengths));
 
 //12.	Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 console.log("12.	Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.");
@@ -218,7 +218,7 @@ return false;
 }
 
 //set variables to be used as the parameters
-let isHotOutside = true;
+let isHotOutside = false;
 let moneyInPocket = 11.00;
 
 //invoke fucntion and console.log result
@@ -250,7 +250,7 @@ const canPlayVideoGames = (arr12) =>{
     if(arr12.every(isYes) == true){
         return `Yes! You can Play video games!`
     }
-return `No! You cannot play video games, takd care of your responsibilities first!`
+return `No! You cannot play video games, take care of your responsibilities first!`
 };
 
 //invoke fucntion and console.log result
