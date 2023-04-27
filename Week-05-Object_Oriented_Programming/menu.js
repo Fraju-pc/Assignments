@@ -36,7 +36,38 @@ class Menu {
         
     }
 
+    
+
     start() {
+        
+        let keys = Object.keys(localStorage); 
+        for (let index = 0; index < keys.length; index++) {
+
+
+
+            let strPrs = JSON.parse(localStorage.getItem(index));
+            console.log(strPrs);
+            
+            let strSp1 = strPrs.split(": ");
+            console.log(strSp1);
+
+            let n = strSp1[1];
+            let g = strSp1[3];
+
+            this.bands.push(new Band(n, g));
+
+            if(strSp1.length > 5){
+                for(let k = 5; k < strSp1.length; k+=2){
+                    this.bands[index].albums.push(new Album(strSp1[k]));
+                }
+
+            }
+            
+            
+            
+
+        }
+        
         let selection = this.showMainMenuOptions();
 
         while(selection !=0 ) {
@@ -59,10 +90,10 @@ class Menu {
         }
             for(let j = 0; j < this.bands.length; j++) {
             this.selectedBand = this.bands[j];
-            let description = 'Band Name: ' + this.selectedBand.name + ' - ' + this.selectedBand.genre;
+            let description = 'Band Name: ' + this.selectedBand.name + ': Genre: ' + this.selectedBand.genre + ": ";
             
             for (let i=0; i< this.selectedBand.albums.length; i++){
-            description += "        " + "Album: " + (i+1) + ': ' + this.selectedBand.albums[i].name;
+            description += "Album " + (i+1) + ': ' + this.selectedBand.albums[i].name + ": ";
            }
             localStorage.setItem(j, JSON.stringify(description));
             //updateUI();
