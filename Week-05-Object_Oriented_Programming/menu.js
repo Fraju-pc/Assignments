@@ -1,3 +1,4 @@
+//Sub class 1
 class Album {
     constructor(name){
         this.name = name;
@@ -8,6 +9,7 @@ class Album {
     }
 }
 
+//Sub Class 2
 class Band {
     constructor(name, genre) {
         this.name = name;
@@ -24,10 +26,11 @@ class Band {
         }
     }
     describe(){
-        return `${this.name} has ${this.albums.length} players.`;
+        return `${this.name} has ${this.albums.length} Albums.`;
     }
 }
 
+//Main Class
 class Menu {
     constructor(){
         this.bands = [];
@@ -40,16 +43,17 @@ class Menu {
 
     start() {
         
+        //code to repopulate the Menu arrays from Local Storage
         let keys = Object.keys(localStorage); 
         for (let index = 0; index < keys.length; index++) {
 
 
 
             let strPrs = JSON.parse(localStorage.getItem(index));
-            console.log(strPrs);
+            //console.log(strPrs);
             
             let strSp1 = strPrs.split(": ");
-            console.log(strSp1);
+            //console.log(strSp1);
 
             let n = strSp1[1];
             let g = strSp1[3];
@@ -88,6 +92,7 @@ class Menu {
             }
             selection = this.showMainMenuOptions();
         }
+            //Code to store Menu items into Local Storage
             for(let j = 0; j < this.bands.length; j++) {
             this.selectedBand = this.bands[j];
             let description = 'Band Name: ' + this.selectedBand.name + ': Genre: ' + this.selectedBand.genre + ": ";
@@ -96,9 +101,9 @@ class Menu {
             description += "Album " + (i+1) + ': ' + this.selectedBand.albums[i].name + ": ";
            }
             localStorage.setItem(j, JSON.stringify(description));
-            //updateUI();
+            
             }
-        alert('Goodbye!');
+        alert('Thank You!');
     }
 
     showMainMenuOptions(){
@@ -179,13 +184,12 @@ class Menu {
     
 }
 
-
-
-
+//Main Function Call
 let menu = new Menu();
 menu.start();
 
-document.getElementById('get-single-item-from-ls').addEventListener("click", function(){
+//Html Button to Display Discography
+document.getElementById('get-items-from-ls').addEventListener("click", function(){
     updateUI();
 }
 );
