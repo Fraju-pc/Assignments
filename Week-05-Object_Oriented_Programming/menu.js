@@ -22,7 +22,7 @@ class Band {
         if(album instanceof Album){
             this.albums.push(album);
         } else {
-            throw new Error(`You can only add an instance of Album.  Argument is not an Album: ${album}`);
+            throw new Error(`You can only add an instance of Album.  What you typed in is not an Album: ${album}`);
         }
     }
     describe(){
@@ -193,13 +193,13 @@ document.getElementById('get-items-from-ls').addEventListener("click", function(
     updateUI();
 }
 );
-   
+ //Html button to empty local storage  
 document.getElementById('remove-all-from-ls').addEventListener("click", function(){
     localStorage.clear();
     updateUI();
 }
 );
-
+//Display Discography to HTML
 function updateUI(){
     let values = {}, 
     keys = Object.keys(localStorage), 
