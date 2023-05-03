@@ -36,6 +36,7 @@ class Card {
       }
     }
   }
+
   //setting the player class and methods
   class Player {
     constructor(name) {
@@ -57,6 +58,7 @@ class Card {
     }
   
   }
+  
   //main class for the game itself!
   class War {
     constructor(player1Name, player2Name) {
