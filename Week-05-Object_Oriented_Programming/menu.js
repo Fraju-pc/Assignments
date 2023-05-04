@@ -153,6 +153,7 @@ class Menu {
         if( index > -1 && index < this.bands.length) {
             this.bands.splice(index, 1);
         }
+        localStorage.removeItem(index);
     }
 
     //function to create new album
