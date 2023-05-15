@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(38,113, 235)
+}
+h1 {
+    color: goldenrod
+}
+div {
+    background-color:cornflowerblue; border-style: solid; border-color: black; border-radius: 5px;
+}
+.p1{
+    text-shadow: gray 1px 1px
+}
+#p2{
+    font-size: 30px
+}
+#example {
+    color: gray;
+    background-color: blue;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: red;
+    border-radius: 5px;
+    height: 200px;
+    text-align: center;
+}
+img{
+    float: right;
+}
+.hov {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+
+.hov:hover {
+    background-color: red;
+}
+.every-even li:nth-child(even){
+background-color: red;
+}
+.every-third li:nth-child(3n) {
+    background-color: red;
+}
