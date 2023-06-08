@@ -57,9 +57,9 @@ function createRadioButton(id, tasked){
   radio.type = 'submit';
   radio.addEventListener('click', () =>{
     let tasker = document.getElementById(`item-${id}`);
-    console.log(tasker);
+    //console.log(tasker);
     body = tasker.querySelector('td').innerHTML;
-    console.log(body);
+    //console.log(body);
 
     //portion that sends the email
 
