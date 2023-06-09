@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+}
+
+.cell {
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    border: 2px solid white;
+    box-shadow: 1px 1px 10px 10px pink;
+    color: White;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 2px pink;
+}
+
+#game-result{
+    color: White;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+.turn-display{
+    color: White;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}

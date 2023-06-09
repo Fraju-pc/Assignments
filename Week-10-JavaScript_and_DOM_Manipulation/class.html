@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white">
+    <input type="text" id="make-input">
+    <button id="make-button">Make Something</button>
+    <ul id="make-list"></ul>
+<button onclick="clearAll()">Delete</button>    
+<script>
+const makeButton = document.getElementById('make-button');
+makeButton.addEventListener('click', makeIt);
+let makeInput= document.getElementById('make-input');
+
+const todolist[];
+
+
+function makeIt(){
+    console.log(makeInput.value);
+    const newBabyLi = document.createElement('li');
+    const makeList = document.getElementById('make-list');
+    newBabyLi.innerHTML = makeInput.value;
+    newBabyLi.addEventListener('click', () =>{
+        newBabyLi.remove();
+    });
+    makeList.appendChild(newBabyLi);
+    makeInput.value = '';
+};
+
+function clearAll() {
+    while(makeList.hasChildNodes()){
+        makeList.removeChild(makeList.lastChild);
+    }
+}
+</script>
+
+
+</body>
+</html>
