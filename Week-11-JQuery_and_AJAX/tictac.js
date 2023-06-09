@@ -1,11 +1,15 @@
+//set current player
 let currentPlayer= "X";
+//variable to check for open spaces
 let plays = 0;
+//variable to stop game
 let gameFinished = false;
+//cell tracking object
 let currentPlayed= {
     X: [],
     O: [],
 };
-
+//possible win conditions
 const winPositions = [
     [1,2,3],
     [4,5,6],
@@ -18,16 +22,25 @@ const winPositions = [
 
 ];
 
+//main function call
 $(document).ready(function() {
 
+    $('.turn-display').text("It is Currently " + currentPlayer + "'s Turn");
+  
+
    // $('.turn-display').text("It is Curently " + currentPlayer + "'s Turn");
+//cell click event handler
 $('.cell').on('click', function() {
     
     if(!gameFinished){
+        //fills in cell
         $(this).text(currentPlayer);
+        
         plays++
+        //sends cell info to array
         currentPlayed[currentPlayer].push(parseInt($(this).attr('data-index')));
-
+        
+        //check for win or draw status
         if(isWinner()){
             gameFinished = true;
            showResult('Win') 
@@ -36,14 +49,15 @@ $('.cell').on('click', function() {
             showResult('Draw');
         }
         
+        //switch player and update top text
         currentPlayer = (currentPlayer === "X") ? "O" : "X";
-
-        $('.turn-display').text("It is Curently " + currentPlayer + "'s Turn");
+        $('.turn-display').text("It is Currently " + currentPlayer + "'s Turn");
+        
     }
     });
     
 });
-
+//function to reset the game board
 function playAgain(){
     currentPlayer= "X";
     plays = 0;
@@ -53,9 +67,11 @@ function playAgain(){
         O: [],
     };  
     $(".cell, #game-result").text(' ');
+    $('.turn-display').text("It is Currently " + currentPlayer + "'s Turn");
     
 };
 
+//function to display winner or Draw
 function showResult(type){
     gameFinished = true;
     if (type === 'Win'){
@@ -66,11 +82,13 @@ function showResult(type){
     
 }
 
+//function to determine if it's a draw
 function isDraw(){
     return plays === 9;
     
 }
 
+//function to determine a winner
 function isWinner(){
     if (plays < 5)
     return;

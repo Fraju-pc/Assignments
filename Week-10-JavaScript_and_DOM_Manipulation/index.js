@@ -10,7 +10,6 @@ document.getElementById('add').addEventListener('click', () =>{
     let table = document.getElementById('a-list');
     let tasked = "Ayla";
     buildRow(table, tasked);
-    
     id++
   } else if(document.getElementById('assigned-person').value === 'Braiden'){
     let table = document.getElementById('b-list');
