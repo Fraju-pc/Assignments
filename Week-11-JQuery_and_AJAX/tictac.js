@@ -66,6 +66,7 @@ function playAgain(){
     };  
     $(".cell, #game-result").text(' ');
     $('.turn-display').text("It is Currently " + currentPlayer + "'s Turn");
+    $('#game-result').attr('class', '');
     
 };
 
@@ -74,8 +75,10 @@ function showResult(type){
     gameFinished = true;
     if (type === 'Win'){
         $('#game-result').text('Winner is: ' + currentPlayer);
+        $('#game-result').attr('class', 'alert alert-success');
     }else{
         $('#game-result').text('It is a Draw!');
+        $('#game-result').attr('class', 'alert alert-danger');
     }
     
 }
