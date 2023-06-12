@@ -25,10 +25,9 @@ const winPositions = [
 //main function call
 $(document).ready(function() {
 
-    $('.turn-display').text("It is Currently " + currentPlayer + "'s Turn");
+//set turn display    
+$('.turn-display').text("It is Currently " + currentPlayer + "'s Turn");
   
-
-   // $('.turn-display').text("It is Curently " + currentPlayer + "'s Turn");
 //cell click event handler
 $('.cell').on('click', function() {
     
@@ -48,15 +47,14 @@ $('.cell').on('click', function() {
         if(!gameFinished && isDraw()){
             showResult('Draw');
         }
-        
-        //switch player and update top text
+        //switch player and update turn display
         currentPlayer = (currentPlayer === "X") ? "O" : "X";
         $('.turn-display').text("It is Currently " + currentPlayer + "'s Turn");
-        
     }
     });
-    
+
 });
+
 //function to reset the game board
 function playAgain(){
     currentPlayer= "X";

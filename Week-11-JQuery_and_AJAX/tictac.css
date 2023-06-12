@@ -7,12 +7,12 @@ body {
     height: 100px;
     width: 100px;
     border: 2px solid white;
-    box-shadow: 1px 1px 10px 10px rgb(255, 151, 168);
+    box-shadow: 0px 0px 10px 10px rgb(255, 151, 168);
     color: White;
     font-size: 50px;
     display: flex;
     justify-content: center;
-    text-shadow: 2px 2px 3px rgb(75, 75, 255);
+    text-shadow: 2px 2px 3px rgb(129, 129, 247);
 }
 
 #game-result{
@@ -20,14 +20,14 @@ body {
     font-size: 50px;
     display: flex;
     justify-content: center;
-    text-shadow: 2px 2px 3px rgb(75, 75, 255);
+    text-shadow: 2px 2px 3px rgb(129, 129, 247);
 }
 .turn-display{
     color: White;
     font-size: 50px;
     display: flex;
     justify-content: center;
-    text-shadow: 3px 3px 5px rgb(75, 75, 255);
+    text-shadow: 3px 3px 5px rgb(129, 129, 247);
 }
 .grid{
     width: 400px;
