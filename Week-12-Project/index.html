@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Chores</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body class="container bg-secondary">
+<br>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>House Chores List</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="assigned-person">Person</label>
+                    <select class="form-control" id="assigned-person" name="assigned-person" placeholder="Person to Assign">
+                        <option value="Ayla">Ayla</option>
+                        <option value="Braiden">Braiden</option>
+                        <option value="Callan">Callan</option>
+                        <option value="Delaney">Delaney</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="date-assigned">Date</label>
+                    <input type="date" class="form-control" id="date-assigned">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="assigned-task">Task</label>
+                    <input type="text" class="form-control" id="assigned-task" placeholder="Task">
+                </div>
+            </div>
+            
+        </div>
+        <div>
+            <br>
+            <button id="add" class="btn btn-primary form-control">Create</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <h5>Ayla</h5>
+        <table id="a-list" class="table table-primary table-striped rounded">
+            <tr>
+                <th>Task</th>
+                <th>Date Created</th>
+                <th>Complete?</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-6">
+        <h5>Braiden</h5>
+        <table id="b-list" class="table table-warning table-striped">
+            <tr>
+                <th>Task</th>
+                <th>Date Created</th>
+                <th>Complete?</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <h5>Callan</h5>
+        <table id="c-list" class="table table-danger table-striped">
+            <tr>
+                <th>Task</th>
+                <th>Date Created</th>
+                <th>Complete?</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-6">
+        <h5>Delaney</h5>
+        <table id="d-list" class="table table-success table-striped">
+            <tr>
+                <th>Task</th>
+                <th>Date Created</th>
+                <th>Complete?</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>  
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+<script src="index.js"></script>
+</body>
+</html>
