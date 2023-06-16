@@ -9,11 +9,12 @@
 
 </head>
 <body class="container pl-2 pr-2 ml-2 mr-2">
-
+    <!--Top of Page text Area to Indicate Player Turn-->
     <div class="container text-center">
         <div class="turn-display"></div><br>
+        <!--Game Grid-->
         <div class="grid container text-center">
-    <div class="row">
+    <div class="row"><!--Row 1-->
         <div class="col sm-4 cell" data-index="1">
             
         </div>
@@ -24,7 +25,7 @@
             
         </div>
     </div>
-    <div class="row">
+    <div class="row"><!--Row 2-->
         <div class="col md-4 cell" data-index="4">
             
         </div>
@@ -35,7 +36,7 @@
             
         </div>
     </div>
-    <div class="row">
+    <div class="row"><!--Row 3-->
         <div class="col md-4 cell" data-index="7">
             
         </div>
@@ -47,6 +48,7 @@
         </div>
     </div>
 </div>
+    <!--Area for Replay Button-->
     <div class="row">
         <div class="restart">
             <br>
@@ -57,18 +59,12 @@
         </div>
         
     </div>
-    
+        <!--Text area to display the winner-->
         <div id="game-result" role="alert"></div>
     
     </div>
     <br><br>
-    
-    
-
-
-
-
-   
+    <!--Scripts Needed to run the code-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="tictac.js"></script>

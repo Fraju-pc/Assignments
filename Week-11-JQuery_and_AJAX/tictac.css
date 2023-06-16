@@ -1,7 +1,9 @@
+/* Background color */
 body {
     background-color: black;
 }
 
+/* General styling of the game cells */
 .cell {
     border-radius: 10px;
     height: 100px;
@@ -15,6 +17,7 @@ body {
     text-shadow: 2px 2px 3px rgb(129, 129, 247);
 }
 
+/* text formatting for game winner display */
 #game-result{
     color: White;
     font-size: 50px;
@@ -26,6 +29,7 @@ body {
     max-width: 500px;
 }
 
+/* text formatting for player turn display */
 .turn-display{
     color: White;
     font-size: 50px;
@@ -34,6 +38,7 @@ body {
     text-shadow: 3px 3px 5px rgb(129, 129, 247);
 }
 
+/*Set Overall size of the Grid*/
 .grid{
     width: 400px;
     align-items: center;
