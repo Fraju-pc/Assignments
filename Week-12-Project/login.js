@@ -1,0 +1,99 @@
+class User {
+    constructor(name, pw) {
+      this.name = name;
+      this.pw = pw;
+    
+    }
+  }
+
+let uname = document.getElementById('username').value;
+let upw = document.getElementById('password').value;
+
+let logins = [];
+
+function getApi(){
+  $.get('https://6489d1fc5fa58521cab04f75.mockapi.io/logins', (data) =>{
+    //loop to iterate through the api data
+    for(let i=0; i < data.length; i++ ){
+        //creating array of api objects
+        const name = data[i].name;
+        const pw = data[i].password;
+        const person = new User(name, pw);
+        logins.push(person);
+        
+    }
+});
+};
+function login(){
+    //get values from form
+    let uname = document.getElementById('username').value;
+    let upw = document.getElementById('password').value;
+   
+    const login = new User (uname, upw);
+
+    for (let i = 0; i < logins.length; i++) {
+      const attempt = logins[i];
+      
+      // Compare the properties of the current object with the given object
+      if (compareObjects(login, attempt)) {
+        //console.log(attempt);
+        pageLogin(attempt);
+
+      }
+    }
+    // Alert if no match is found
+    //alert("Username or Password Not Found") 
+    //location.reload();
+
+
+  };
+
+// Helper function to compare two objects
+function compareObjects(obj1, obj2) {
+  // Get the keys of obj1
+  const keys = Object.keys(obj1);
+  
+  // Compare the values of each key in obj1 and obj2
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    
+    if (obj1[key] !== obj2[key]) {
+      // Values are different, objects don't match
+      return false; 
+    }
+  }
+  // All values are the same, objects match
+  return true; 
+}
+
+//function to determin which page to log into
+function pageLogin(attempt){
+console.log(attempt.name);
+
+switch(attempt.name){
+  case "Admin":
+    window.location.href='index.html'
+  break;
+  case "Ayla":
+    window.location.href='alist.html'
+  break;
+  case "Braiden":
+    window.location.href='blist.html'
+  break;
+  case "Callan":
+    window.location.href='clist.html'
+  break;
+  case "Delaney":
+    window.location.href='dlist.html'
+  break;
+  default:
+    
+}
+
+};
+
+//call to populate array from api
+getApi();
+
+//event listener
+document.getElementById('login').addEventListener('click', login);

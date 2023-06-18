@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Chores</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body class="container bg-secondary">
+<br>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Add New User</h1>
+            </div>
+            <div class="col-md-6"><button class="btn btn-primary" onclick="window.location.href='index.html';">Go Back</button></div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-use">New User</label>
+                    <input type="text" class="form-control" id="new-user" placeholder="User Name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="new-password">Password</label>
+                    <input type="text" class="form-control" id="new-password" placeholder="Password">
+                </div>
+            </div>
+            
+        </div>
+        <div>
+            <br>
+            <button id="add" class="btn btn-primary form-control">Add New User</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="users.js"></script>
+</body>
+</html>
