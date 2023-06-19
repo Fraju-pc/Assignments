@@ -72,19 +72,19 @@ console.log(attempt.name);
 
 switch(attempt.name){
   case "Admin":
-    window.location.href='index.html'
+    window.location.href='./pages/admin.html'
   break;
   case "Ayla":
-    window.location.href='alist.html'
+    window.location.href='./pages/alist.html'
   break;
   case "Braiden":
-    window.location.href='blist.html'
+    window.location.href='./pages/blist.html'
   break;
   case "Callan":
-    window.location.href='clist.html'
+    window.location.href='./pages/clist.html'
   break;
   case "Delaney":
-    window.location.href='dlist.html'
+    window.location.href='./pages/dlist.html'
   break;
   default:
     

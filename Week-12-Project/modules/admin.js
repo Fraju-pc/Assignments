@@ -42,7 +42,6 @@ function getApi(){
 $.get('https://6489d1fc5fa58521cab04f75.mockapi.io/ChoreDb', (data) =>{
 	console.log(data);
   
-	//$('.result').text(data.firstname + " " + data.lastname + ", Grade: "  + data.grade + "%");
 	for(let i=0; i < data.length; i++ ){
       // Get api values
       

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Chores</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 
 </head>
 <body class="container bg-secondary">
@@ -14,19 +14,19 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-6">
-                <h1>Braiden's Chore List</h1>
+                <h1>Delaney's Chore List</h1>
             </div>
             <div class="col-md-6 tex-center">
-                <button class="btn btn-primary" onclick="window.location.href='login.html';">Logout</button>
+                <button class="btn btn-primary" onclick="window.location.href='../login.html';">Logout</button>
             </div>
         </div>
         
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-lg-12">
         <br><br>
-        <table id="b-list" class="table table-primary table-striped rounded">
+        <table id="d-list" class="table table-danger table-striped rounded">
             <tr>
                 <th>Task</th>
                 <th>Date Created</th>
@@ -39,9 +39,9 @@
 </div>
 
 
-<script src="node_modules/jquery/dist/jquery.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>  
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>  
 <script src="https://smtpjs.com/v3/smtp.js"></script>  
-<script src="landing.js"></script>
+<script type="module" src="../modules/dtable.js"></script>
 </body>
 </html>
