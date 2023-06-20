@@ -25,46 +25,34 @@ function getApi(){
 };
 
 //Main function to check entered values versus logins
-function login(){
+function login(e){
+  e.preventDefault();
+
     //get values from form
     let uname = document.getElementById('username').value;
     let upw = document.getElementById('password').value;
    
     //set object from form data
-    const login = new User (uname, upw);
+    const user = new User (uname, upw);
 
-    for (let i = 0; i < logins.length; i++) {
-      const attempt = logins[i];
-      
-      // Compare the properties of the current object with the given object
-      if (compareObjects(login, attempt)) {
-        //console.log(attempt);
-        pageLogin(attempt);
-
-      } 
-    }
+      // Compare the user object with the existing user array
+    let match = logins.find(function(existingUser) {
+    return existingUser.name === user.name && existingUser.password === user.password;
     
-    //pageLogin();
-};
-
-// Helper function to compare two objects
-function compareObjects(obj1, obj2) {
-  // Get the keys of obj1
-  const keys = Object.keys(obj1);
+  });
   
-  // Compare the values of each key in obj1 and obj2
-  for (let i = 0; i < keys.length; i++) {
-    const key = keys[i];
-    
-    if (obj1[key] !== obj2[key]) {
-      // Values are different, objects don't match
-      return false; 
-    }
+  if (match) {
+    // Call a function if a match is found
+    pageLogin(match);
+  } else {
+    // Call a different function if no match is found
+    pageLogin("fail");
   }
-  // All values are the same, objects match
-  return true; 
-}
+  
+  // Reset the form
+  document.getElementById("loginForm").reset();
 
+};
 
 
 //function to determine which page to log into
@@ -87,13 +75,12 @@ switch(attempt.name){
   case "Delaney":
     window.location.href='./pages/dlist.html'
   break;
-
+  //default for bad Username / Password Combo
   default:
     alert("Username or Password Not Found");
     location.reload();
     
 }
-
 };
 
 
