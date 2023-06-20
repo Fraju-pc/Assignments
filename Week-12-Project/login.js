@@ -6,11 +6,10 @@ class User {
     }
   }
 
-let uname = document.getElementById('username').value;
-let upw = document.getElementById('password').value;
-
+//array to store Api Data
 let logins = [];
 
+//pull from Api
 function getApi(){
   $.get('https://6489d1fc5fa58521cab04f75.mockapi.io/logins', (data) =>{
     //loop to iterate through the api data
@@ -24,11 +23,14 @@ function getApi(){
     }
 });
 };
+
+//Main function to check entered values versus logins
 function login(){
     //get values from form
     let uname = document.getElementById('username').value;
     let upw = document.getElementById('password').value;
    
+    //set object from form data
     const login = new User (uname, upw);
 
     for (let i = 0; i < logins.length; i++) {
@@ -39,14 +41,11 @@ function login(){
         //console.log(attempt);
         pageLogin(attempt);
 
-      }
+      } 
     }
-    // Alert if no match is found
-    //alert("Username or Password Not Found") 
-    //location.reload();
-
-
-  };
+    
+    //pageLogin();
+};
 
 // Helper function to compare two objects
 function compareObjects(obj1, obj2) {
@@ -66,7 +65,9 @@ function compareObjects(obj1, obj2) {
   return true; 
 }
 
-//function to determin which page to log into
+
+
+//function to determine which page to log into
 function pageLogin(attempt){
 console.log(attempt.name);
 
@@ -86,11 +87,15 @@ switch(attempt.name){
   case "Delaney":
     window.location.href='./pages/dlist.html'
   break;
+
   default:
+    alert("Username or Password Not Found");
+    location.reload();
     
 }
 
 };
+
 
 //call to populate array from api
 getApi();
