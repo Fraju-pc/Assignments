@@ -9,6 +9,7 @@ class Chore {
   
   //array to store Chore Objects
   let chores = []; 
+  var myModal = new bootstrap.Modal(document.getElementById('myModal'),)
   
   //function to build the table rows
   function buildRow(table, chore)
@@ -43,11 +44,11 @@ class Chore {
         Subject : "Completed Task",
         Body : 'Person: ' + tasked + ' Task: ' + body
       }).then(
-      message => alert(message)
+        message => myModal.show((document.getElementById("message").innerHTML = message))
       );
     });
       
     return radio;
   }
   
-export {Chore, chores, buildRow, createRadioButton};
+export {Chore, chores, myModal, buildRow, createRadioButton};

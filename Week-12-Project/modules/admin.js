@@ -9,6 +9,7 @@ class Chore {
 }
 
 //Global Variable
+var myModal = new bootstrap.Modal(document.getElementById('myModal'),)
 counter = 0;
 //array to store Chore Objects
 let chores = []; 
@@ -132,7 +133,8 @@ function createRadioButton(id, tasked){
       Subject : "Completed Task",
       Body : 'Person: ' + tasked + ' Task: ' + body
     }).then(
-    message => alert(message)
+    //message => alert(message)
+      message => myModal.show((document.getElementById("message").innerHTML = message)) 
     );
   });
     
@@ -146,7 +148,7 @@ function createDeleteButton(id){
     btn.id = id;
     btn.innerHTML = 'Delete';
     btn.onclick = () =>{
-        console.log(`Deleting row with id: item-${id}`);
+        //console.log(`Deleting row with id: item-${id}`);
         let elementToDelete = document.getElementById(`item-${id}`);
         elementToDelete.parentNode.removeChild(elementToDelete);
         //delete from Api        

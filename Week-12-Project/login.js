@@ -6,6 +6,11 @@ class User {
     }
   }
 
+var myModal = new bootstrap.Modal(document.getElementById('myModal'),{ 
+keyboard: true,
+focus: true
+});  
+
 //array to store Api Data
 let logins = [];
 
@@ -77,8 +82,9 @@ switch(attempt.name){
   break;
   //default for bad Username / Password Combo
   default:
-    alert("Username or Password Not Found");
-    location.reload();
+    //alert("Username or Password Not Found");
+    myModal.show();
+    //location.reload();
     
 }
 };
