@@ -81,8 +81,27 @@ function buildRow(user)
     'text': 'Update'
   });
   let action1 = row.insertCell(3);
-  $(action1).append(button);
+  $(action1).append(button, createDeleteButton(user.id));
  
+}
+
+//function to create the delete button
+function createDeleteButton(id){
+  let btn= document.createElement('button');
+  btn.className = 'btn btn-danger';
+  btn.id = id;
+  btn.innerHTML = 'Delete';
+  btn.onclick = () =>{
+      //console.log(`Deleting row with id: item-${id}`);
+      let elementToDelete = document.getElementById(`item-${id}`);
+      elementToDelete.parentNode.removeChild(elementToDelete);
+      //delete from Api        
+      $.ajax({type: "DELETE", url: `https://6489d1fc5fa58521cab04f75.mockapi.io/logins/${id}`});
+        
+  };
+  
+  return btn;
+  location.reload();
 }
 
 
