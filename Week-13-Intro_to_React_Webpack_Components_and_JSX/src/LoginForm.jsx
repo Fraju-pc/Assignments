@@ -29,6 +29,9 @@ export default function LoginForm(){
     } else {
       // alert for no match
       alert('Invalid username or password');
+      //reset fields
+      setUserName('');
+      setPassWord('');
       
     }
 
