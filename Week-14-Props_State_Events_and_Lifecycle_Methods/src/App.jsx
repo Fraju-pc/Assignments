@@ -18,6 +18,7 @@ function App() {
         key={index} 
         title={movie.title} 
         synopsis={movie.synopsis}
+        image={movie.image}
         />
         ))} 
       </div>

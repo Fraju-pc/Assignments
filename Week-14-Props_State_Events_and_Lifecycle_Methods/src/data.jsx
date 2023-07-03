@@ -2,7 +2,7 @@ export const movieList = [
     {
        id: 1,
        title: 'The Avengers',
-       image: 'avengers.jpg',
+       image: '../src/images/Avengers.jpg',
        director: 'Joss Whedon',
        writer: 'Joss Whedon',
        starring: 'Robert Downey Jr., Chris Evans, Mark Ruffalo',
@@ -28,7 +28,7 @@ export const movieList = [
     {
        id: 2,
        title: 'Inception',
-       image: 'inception.jpg',
+       image: '../src/images/Inception.jpg',
        director: 'Christopher Nolan',
        writer: 'Christopher Nolan',
        starring: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page',
@@ -59,7 +59,7 @@ export const movieList = [
     {
        id: 3,
        title: 'Interstellar',
-       image: 'interstellar.jpg',
+       image: '../src/images/Interstellar.jpg',
        director: 'Christopher Nolan',
        writer: 'Jonathan Nolan, Christopher Nolan',
        starring: 'Matthew McConaughey, Anne Hathaway, Jessica Chastain',
@@ -98,7 +98,7 @@ export const movieList = [
     {
        id: 4,
        title: 'The Dark Knight',
-       image: 'dark-knight.jpg',
+       image: '../src/images/DarkKnight.jpg',
        director: 'Christopher Nolan',
        writer: 'Jonathan Nolan, Christopher Nolan',
        starring: 'Christian Bale, Heath Ledger, Aaron Eckhart',
