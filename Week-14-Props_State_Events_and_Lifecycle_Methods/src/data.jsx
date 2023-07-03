@@ -1,131 +1,181 @@
 export const movieList = [
     {
        id: 1,
-       title: 'The Avengers',
-       image: '../src/images/Avengers.jpg',
-       director: 'Joss Whedon',
-       writer: 'Joss Whedon',
-       starring: 'Robert Downey Jr., Chris Evans, Mark Ruffalo',
-       synopsis:
-          "Earth's mightiest heroes must come together and learn to fight as a team",
+       title: 'The Fifth Element',
+       image: '../src/images/FifthElement.jpg',
+       director: 'Luc Besson',
+       writer: 'Luc Besson',
+       starring: 'Bruce Willis, Milla Jovovich, Gary Oldman, Chris Tucker, Ian Holm',
+       synopsis: "In the colorful future, a cab driver unwittingly becomes the central figure in the search for a legendary cosmic weapon to keep Evil and Mr. Zorg at bay.",
        rating: 'PG-13',
-      //  reviewList: [
-      //     {
-      //        id: 1,
-      //        author: 'John Doe',
-      //        stars: 4.5,
-      //        review: 'Great movie! Amazing action sequences and a compelling story.',
-      //     },
-      //     {
-      //        id: 2,
-      //        author: 'Jane Smith',
-      //        stars: 3.5,
-      //        review:
-      //           'Good movie, but could have been better. Some scenes felt unnecessary.',
-      //     },
-      //  ],
+       reviewList: [
+          {
+             id: 1,
+             author: 'John Doe',
+             stars: 5.0,
+             review: 'Great movie! Amazing action sequences and a compelling story.',
+          },
+          {
+             id: 2,
+             author: 'Jane Smith',
+             stars: 4.0,
+             review:
+                'Good movie, but could have been better. Some scenes felt unnecessary.',
+          },
+       ],
     },
     {
        id: 2,
-       title: 'Inception',
-       image: '../src/images/Inception.jpg',
-       director: 'Christopher Nolan',
-       writer: 'Christopher Nolan',
-       starring: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page',
-       synopsis: 'A thief who steals corporate secrets by entering the subconscious',
-       rating: 'PG-13',
-      //  reviewList: [
-      //     {
-      //        id: 1,
-      //        author: 'Alice Johnson',
-      //        stars: 5.0,
-      //        review:
-      //           "One of the best movies I've ever seen. Mind-bending and thought-provoking.",
-      //     },
-      //     {
-      //        id: 2,
-      //        author: 'Bob Anderson',
-      //        stars: 4.0,
-      //        review: 'A masterpiece of storytelling. The visuals are stunning.',
-      //     },
-      //     {
-      //        id: 3,
-      //        author: 'Chris Wilson',
-      //        stars: 3.5,
-      //        review: "Good movie, but it's a bit confusing at times.",
-      //     },
-      //  ],
+       title: 'The Matrix',
+       image: '../src/images/TheMatrix.jpg',
+       director: 'Lana Wachowski, Lilly Wachowski',
+       writer: 'Lana Wachowski, Lilly Wachowski',
+       starring: 'Keanu Reves, Laurence Fishburn, Carrie-Anne Moss',
+       synopsis: 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.',
+       rating: 'R',
+       reviewList: [
+          {
+             id: 1,
+             author: 'Alice Johnson',
+             stars: 5.0,
+             review:
+                "One of the best movies I've ever seen. Mind-bending and thought-provoking.",
+          },
+          {
+             id: 2,
+             author: 'Bob Anderson',
+             stars: 4.0,
+             review: 'A masterpiece of storytelling. The visuals are stunning.',
+          },
+          {
+             id: 3,
+             author: 'Chris Wilson',
+             stars: 4.0,
+             review: "Good movie, but it's a bit confusing at times.",
+          },
+       ],
     },
     {
        id: 3,
-       title: 'Interstellar',
-       image: '../src/images/Interstellar.jpg',
-       director: 'Christopher Nolan',
-       writer: 'Jonathan Nolan, Christopher Nolan',
-       starring: 'Matthew McConaughey, Anne Hathaway, Jessica Chastain',
-       synopsis:
-          "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival",
-       rating: 'PG-13',
-      //  reviewList: [
-      //     {
-      //        id: 1,
-      //        author: 'David Smith',
-      //        stars: 4.5,
-      //        review:
-      //           'A visually stunning and emotionally powerful film. Highly recommend!',
-      //     },
-      //     {
-      //        id: 2,
-      //        author: 'Emily Davis',
-      //        stars: 5.0,
-      //        review: "One of the best sci-fi movies I've ever seen. It's a masterpiece.",
-      //     },
-      //     {
-      //        id: 3,
-      //        author: 'Michael Johnson',
-      //        stars: 4.0,
-      //        review: 'Great movie with exceptional performances and a captivating story.',
-      //     },
-      //     {
-      //        id: 4,
-      //        author: 'Sarah Thompson',
-      //        stars: 4.5,
-      //        review:
-      //           "Interstellar takes you on an incredible journey and leaves you thinking about it long after it's over.",
-      //     },
-      //  ],
+       title: 'Contact',
+       image: '../src/images/Contact.jpg',
+       director: 'Robert Zemeckis',
+       writer: 'James V. Hart, Michael Goldenberg, Carl Sagan',
+       starring: 'Jodie Foster, Matthew McConaughey, Tom Skeritt',
+       synopsis: "Dr. Ellie Arroway, after years of searching, finds conclusive radio proof of extraterrestrial intelligence, sending plans for a mysterious machine.",
+       rating: 'PG',
+       reviewList: [
+          {
+             id: 1,
+             author: 'David Smith',
+             stars: 4.0,
+             review:
+                'A visually stunning and emotionally powerful film. Highly recommend!',
+          },
+          {
+             id: 2,
+             author: 'Emily Davis',
+             stars: 5.0,
+             review: "One of the best sci-fi movies I've ever seen. It's a masterpiece.",
+          },
+          {
+             id: 3,
+             author: 'Michael Johnson',
+             stars: 4.0,
+             review: 'Great movie with exceptional performances and a captivating story.',
+          },
+          {
+             id: 4,
+             author: 'Sarah Thompson',
+             stars: 5.0,
+             review:
+                "Contact takes you on an incredible journey and leaves you thinking about it long after it's over.",
+          },
+       ],
     },
     {
        id: 4,
-       title: 'The Dark Knight',
-       image: '../src/images/DarkKnight.jpg',
-       director: 'Christopher Nolan',
-       writer: 'Jonathan Nolan, Christopher Nolan',
-       starring: 'Christian Bale, Heath Ledger, Aaron Eckhart',
-       synopsis: 'Batman faces off against the Joker, a villain who thrives on chaos',
+       title: 'Jurassic Park',
+       image: '../src/images/JurassicPark.jpg',
+       director: 'Steven Speilberg',
+       writer: 'Michael Chriton, David Koepp',
+       starring: 'Sam Niell, Laura Dern, Jeff Goldblum',
+       synopsis: 'A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting a couple of kids after a power failure causes the park\'s cloned dinosaurs to run loose.',
        rating: 'PG-13',
-      //  reviewList: [
-      //     {
-      //        id: 1,
-      //        author: 'John Williams',
-      //        stars: 5.0,
-      //        review:
-      //           "An absolute masterpiece. Heath Ledger's performance as the Joker is outstanding.",
-      //     },
-      //     {
-      //        id: 2,
-      //        author: 'Rebecca Johnson',
-      //        stars: 4.5,
-      //        review:
-      //           'Dark and gritty with intense action sequences. One of the best superhero movies ever made.',
-      //     },
-      //     {
-      //        id: 3,
-      //        author: 'James Anderson',
-      //        stars: 4.0,
-      //        review:
-      //           "A thrilling and dark movie with exceptional performances. Heath Ledger's portrayal of the Joker is unforgettable.",
-      //     },
-      //  ],
+       reviewList: [
+          {
+             id: 1,
+             author: 'John Williams',
+             stars: 5.0,
+             review:
+                "An absolute masterpiece. This movie is years ahead of it's time",
+          },
+          {
+             id: 2,
+             author: 'Rebecca Johnson',
+             stars: 4.0,
+             review:
+                'Awe inspiring with intense action sequences. One of the best movies ever made.',
+          },
+          {
+             id: 3,
+             author: 'James Anderson',
+             stars: 4.0,
+             review:
+                "A thrilling and dark movie with exceptional performances. ",
+          },
+       ],
     },
+
+    {
+      id: 5,
+      title: 'Independence Day',
+      image: '../src/images/Independence.jpg',
+      director: 'Roland Emmerich',
+      writer: 'Dean Devlin, Roland Emmerich',
+      starring: 'Will Smith. Bill Pullman, Jeff Goldblum',
+      synopsis: "The aliens are coming and their goal is to invade and destroy Earth. Fighting superior technology, mankind's best weapon is the will to survive.",
+      rating: 'PG-13',
+      reviewList: [
+         {
+            id: 1,
+            author: 'John Doe',
+            stars: 4.0,
+            review: 'Great movie! Amazing action sequences and a compelling story.',
+         },
+         {
+            id: 2,
+            author: 'Jane Smith',
+            stars: 3.0,
+            review:
+               'Good movie, but could have been better. Some scenes felt unnecessary.',
+         },
+      ],
+   },
+
+   {
+      id: 6,
+      title: 'Starship Troopers',
+      image: '../src/images/Troopers.jpg',
+      director: 'Paul Verhoeven',
+      writer: 'Edward Neumeier, Robert A. Heinlein',
+      starring: 'Casper Van Dien, Denise Richards, Dina Meyer, Neil Patrick Harris',
+      synopsis: "Humans in a fascist, militaristic future wage war with giant alien bugs.",
+      rating: 'R',
+      reviewList: [
+         {
+            id: 1,
+            author: 'John Doe',
+            stars: 5.0,
+            review: 'Great movie! Amazing action sequences and a compelling story.',
+         },
+         {
+            id: 2,
+            author: 'Jane Smith',
+            stars: 4.0,
+            review:
+               'Good movie, but could have been better. Some scenes felt unnecessary.',
+         },
+      ],
+   },
  ]; 

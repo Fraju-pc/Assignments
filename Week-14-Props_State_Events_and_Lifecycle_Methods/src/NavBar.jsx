@@ -1,7 +1,7 @@
 export default function NavBar(){
     return(
         <nav>
-            Patrick's Movie List
+            90's Scifi in no particular order!
         </nav>
     )
 }
