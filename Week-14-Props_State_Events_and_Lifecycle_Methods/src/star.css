@@ -1,0 +1,8 @@
+.star {
+    color: black;
+    cursor: pointer;
+  }
+  
+  .star.active {
+    color: yellow;
+  }
