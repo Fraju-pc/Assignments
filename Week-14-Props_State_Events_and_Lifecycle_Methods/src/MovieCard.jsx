@@ -1,10 +1,11 @@
-//import { useStat } from "react"
+import React, { useState } from 'react';
+//import StarRating from "./StarRating"
+import Reviews from "./Reviews"
 
-import StarRating from "./StarRating"
+export default function MovieCard( {title, synopsis, image, reviews} ){
 
-export default function MovieCard( {title, synopsis, image} ){
-
-    
+  const [show, setShow] = useState(false)
+    //console.log(reviews)
     return(
       <>
       
@@ -13,9 +14,14 @@ export default function MovieCard( {title, synopsis, image} ){
           <img className="card-img-top" src={image} alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">{title}</h5>
-              <StarRating />
+              
               <p className="card-text">{synopsis}</p>
-              <a href="#" className="btn btn-primary">Leave a Review</a>
+              <div>
+              <button onClick={ () => setShow(true) }>Reviews</button>
+              <Reviews onClose={ () => setShow(false)} 
+              show={show}
+              reviews={reviews}/>
+              </div>
             </div>
         </div> 
       </div>

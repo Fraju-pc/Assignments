@@ -19,8 +19,7 @@ export const movieList = [
              id: 2,
              author: 'Jane Smith',
              stars: 4.0,
-             review:
-                'Good movie, but could have been better. Some scenes felt unnecessary.',
+             review: 'Good movie, but could have been better. Some scenes felt unnecessary.',
           },
        ],
     },

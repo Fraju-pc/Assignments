@@ -19,6 +19,7 @@ function App() {
         title={movie.title} 
         synopsis={movie.synopsis}
         image={movie.image}
+        reviews={movie.reviewList}
         />
         ))} 
       </div>
