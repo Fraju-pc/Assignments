@@ -1,12 +1,13 @@
+import LeaveReview from "./Leave Review";
 import "./Review.css"
 import StarRating from "./StarRating";
 
-const Reviews = props => {
-    if (!props.show){
+export default function Reviews ( {show, reviews, handlePost, onClose, id} ) {
+    if (!show){
         return null
     }
-    const rev= props.reviews;
-
+    
+   
     return (
         <div className="modal">
             <div className="modal-content">
@@ -14,7 +15,10 @@ const Reviews = props => {
                     <h3 className="modal-title">Reviews</h3>
                 </div>
                 <div className="modal-body">
-                    {rev.map((review, index) => (
+                    <div>
+                        <LeaveReview id={id} handlePost={handlePost} />
+                    </div>
+                    {reviews.map((review, index) => (
                         <div key={index}>
                             <h5>{review.author}</h5>
                             <StarRating defaultRating={review.stars}/>
@@ -23,11 +27,10 @@ const Reviews = props => {
                     ))}
                 </div>
                 <div className="modal-footer">
-                    <button onClick={props.onClose} className="button">Close</button>
+                    <button onClick={onClose} className="btn btn-secondary">Close</button>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Reviews

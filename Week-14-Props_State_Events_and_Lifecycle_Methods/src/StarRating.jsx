@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import "./star.css"
 
-const StarRating = ({ defaultRating }) => {
+export default function StarRating ({ defaultRating, onRatingChange }) {
     const [rating, setRating] = useState(defaultRating);
   
     const handleStarClick = (selectedRating) => {
       setRating(selectedRating);
+      onRatingChange(selectedRating);
     };
   
     return (
@@ -25,8 +26,5 @@ const StarRating = ({ defaultRating }) => {
     );
   };
   
-  StarRating.propTypes = {
-    defaultRating: PropTypes.number.isRequired,
-  };
+
   
-  export default StarRating;

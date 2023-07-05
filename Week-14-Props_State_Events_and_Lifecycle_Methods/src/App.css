@@ -29,8 +29,24 @@ nav{
 
 .card{
   width: 18rem;
+  height: 45em;
   padding: 2em;
   margin: 2em;
   background-color: #61dbfb;
+}
+
+.hover{
+  margin: 3px;
+  position:absolute;
+  color: #61dbfb;
+  box-sizing: border-box;
+  max-height:200px;
+  left:0%;
+  z-index:999;
+  background:#242443;
+  padding:10px;
+  border:1px solid #4c768d;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px #242443;
 }
 
