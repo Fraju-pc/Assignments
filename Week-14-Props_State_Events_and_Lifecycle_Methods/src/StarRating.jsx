@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-//import PropTypes from 'prop-types';
 import "./star.css"
 
 export default function StarRating ({ defaultRating, onRatingChange }) {

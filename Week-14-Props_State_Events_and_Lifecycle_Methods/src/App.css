@@ -25,6 +25,7 @@ nav{
   font-size: 24px;
   padding: 1px;
   border-radius: 10px;
+  box-shadow: 0 0 2px 2px #4c768d;
 }
 
 .card{
@@ -33,6 +34,7 @@ nav{
   padding: 2em;
   margin: 2em;
   background-color: #61dbfb;
+  box-shadow: 0 0 2px 2px #4c768d;
 }
 
 .hover{
@@ -50,3 +52,6 @@ nav{
   box-shadow: 0 0 2px 2px #242443;
 }
 
+.btn{
+  box-shadow: 0 0 2px 2px #242443;
+}

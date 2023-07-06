@@ -1,4 +1,4 @@
-export const movieList = [
+export const movies = [
     {
        id: 1,
        title: 'The Fifth Element',

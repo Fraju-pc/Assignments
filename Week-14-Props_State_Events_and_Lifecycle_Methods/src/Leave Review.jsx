@@ -8,24 +8,26 @@ export default function LeaveReview({ id, handlePost}){
   
   const postReview = (e) => {
    e.preventDefault();
+
    let index = id;
    let newReview = {
       author: userName,
-      stars: selectedRatings[0],
+      stars: selectedRating,
       review: review
    }
 
 handlePost(index, newReview);
+
 setUserName("");
 setReview("");
-setSelectedRatings(0);
 
+handleRatingChange(0);
  };
 
- const [selectedRatings, setSelectedRatings] = useState([]);
+ const [selectedRating, setSelectedRating] = useState();
 
  const handleRatingChange = (rating) => {
-   setSelectedRatings((prevRatings) => [...prevRatings, rating]);
+   setSelectedRating(() => rating);
  };
   //html form
    return (
@@ -47,7 +49,7 @@ setSelectedRatings(0);
                onChange={(e) => setReview(e.target.value)} />
                 <br/>
                 <label>How Many Stars Would You Give?</label>
-                <StarRating defaultValue={0} onRatingChange={handleRatingChange}/>
+                <StarRating key={selectedRating} defaultValue={0} onRatingChange={handleRatingChange}/>
                <br/>
                <button id="post" className="btn btn-secondary" type="submit">Post Review</button>
                <br/>
