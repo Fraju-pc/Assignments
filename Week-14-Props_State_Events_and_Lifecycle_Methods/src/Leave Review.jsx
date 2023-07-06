@@ -9,6 +9,8 @@ export default function LeaveReview({ id, handlePost}){
   const postReview = (e) => {
    e.preventDefault();
 
+
+
    let index = id;
    let newReview = {
       author: userName,
