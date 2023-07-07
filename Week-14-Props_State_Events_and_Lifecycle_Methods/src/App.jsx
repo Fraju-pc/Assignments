@@ -1,20 +1,20 @@
+//Imports
 import { useState } from 'react'
 import NavBar from "../src/NavBar"
 import MovieCard from '../src/MovieCard'
 import { movies } from "./data"
 
+//App Component
+export default function App() {
 
-
-function App() {
-
-
+  //Putting the Array in State
   const [movieList, setMovielist] = useState(movies);
   
-
+    //Callback Function sent down to form Component to Add Review to Array
     const handlePost = (index, newReview) =>{
-    
+    //Push to Array
     movieList[index].reviewList.push(newReview);
-
+    //Update the State
     setMovielist((prevArray) => {
       const newArray = [...prevArray];
       const objectToUpdate = { ...newArray[index] };
@@ -23,14 +23,10 @@ function App() {
       objectToUpdate.subArray = subArrayToUpdate;
       newArray[index] = objectToUpdate;
       return newArray;
-    });
-
-    
+    });  
   }
 
-    //console.log(reviews)
-
-
+  //HTML Output
   return (
     <>
      <NavBar />
@@ -54,5 +50,3 @@ function App() {
     </>
   )
 }
-
-export default App

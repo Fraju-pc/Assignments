@@ -1,3 +1,4 @@
+//Main Data Array
 export const movies = [
     {
        id: 1,

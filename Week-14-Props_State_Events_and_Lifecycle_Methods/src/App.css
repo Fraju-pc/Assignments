@@ -1,3 +1,4 @@
+/* Base CSS File */
 #root {
   
   max-width: 1280px;
@@ -15,7 +16,7 @@ body{
   }
 }
 
-
+/* Nav Styling */
 nav{
 
   background-color: #61dbfb;
@@ -28,6 +29,7 @@ nav{
   box-shadow: 0 0 2px 2px #4c768d;
 }
 
+/* Movie Card Styling */
 .card{
   width: 18rem;
   height: 45em;
@@ -37,6 +39,7 @@ nav{
   box-shadow: 0 0 2px 2px #4c768d;
 }
 
+/* Synopsis Hover Component */
 .hover{
   margin: 3px;
   position:absolute;
@@ -52,6 +55,7 @@ nav{
   box-shadow: 0 0 2px 2px #242443;
 }
 
+/* General Button Styling */
 .btn{
   box-shadow: 0 0 2px 2px #242443;
 }

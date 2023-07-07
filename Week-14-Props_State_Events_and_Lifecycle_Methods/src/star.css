@@ -1,8 +1,10 @@
+/* unclicked stars */
 .star {
     color: black;
     cursor: pointer;
   }
-  
+
+/* clicked stars */
   .star.active {
     color: yellow;
   }
