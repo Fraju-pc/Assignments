@@ -1,0 +1,38 @@
+/* CSS for the Modal */
+
+#modal {
+    border-radius: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#modal-content {
+    width: 500px;
+    background-color: #8dc6b5;
+    border: 2px solid #9c1593;
+    border-radius: 10px;
+}
+
+#modal-header {
+    padding: 10px;
+}
+
+#modal-title {
+    margin: 0;
+
+}
+
+#modal-body {
+    padding: 10px;
+    color: #1164ef;
+    background-color: #8dc6b5;
+    border-top: 1px solid #9c1593;
+    border-bottom: 1px solid #9c1593;
+}
