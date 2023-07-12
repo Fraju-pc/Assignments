@@ -6,13 +6,12 @@ export default function NavBar(){
         <nav>
             <div className="logo">
             <img src="../images/pepper.png" height="150px"/>
-            <h2>Cayenne Catering</h2>
+            <h2>Cayenne Catering Event Meal Planner</h2>
             </div>
             
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/about.html">About</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
+            
         </ul>
     </nav>
     )

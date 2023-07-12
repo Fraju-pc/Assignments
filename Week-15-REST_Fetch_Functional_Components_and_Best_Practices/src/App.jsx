@@ -13,13 +13,13 @@ function App() {
   
   const [customerFoodChoice, setCustomerFoodChoice] = useState('');
   
-  const [customerEvent, setCustomerEvent] = useState('');
+  const [customerEvent, setCustomerEvent] = useState('Wedding');
 
   const [updatedCustomer, setUpdatedCustomer] = useState('');
   
   const [updatedFoodChoice, setUpdatedFoodChoice] = useState('');
   
-  const [updatedCustomerEvent, setUpdatedCustomerEvent] = useState('');
+  const [updatedCustomerEvent, setUpdatedCustomerEvent] = useState('Wedding');
 
   function getCustomers(){
     fetch(Mock_Api_URL)
@@ -48,7 +48,9 @@ function App() {
         foodChoice: customerFoodChoice,
         event: customerEvent,
       })
-    }).then(() => getCustomers())
+    }).then(() => getCustomers()).then(setCustomerName(''),
+    setCustomerFoodChoice(''),
+    setCustomerEvent(''))
     
   };
 
@@ -79,7 +81,10 @@ function App() {
         <AddCustomer setCustomerName={setCustomerName} 
         setCustomerFoodChoice={setCustomerFoodChoice} 
         setCustomerEvent={setCustomerEvent}
-        postNewCustomer={postNewCustomer}/>
+        postNewCustomer={postNewCustomer}
+        newCustomerName={newCustomerName}
+        customerFoodChoice={customerFoodChoice}
+        customerEvent={customerEvent}/>
       </div>
       
       <div>
@@ -89,8 +94,11 @@ function App() {
         customer={customer} 
         index={index} 
         deleteCustomer={deleteCustomer}
+        updatedCustomer={updatedCustomer}
         setUpdatedCustomer={setUpdatedCustomer}
+        updatedFoodChoice={updatedFoodChoice}
         setUpdatedFoodChoice={setUpdatedFoodChoice}
+        updatedCustomerEvent={updatedCustomerEvent}
         setUpdatedCustomerEvent={setUpdatedCustomerEvent}
         updateCustomer={updateCustomer}/>
         ))}
