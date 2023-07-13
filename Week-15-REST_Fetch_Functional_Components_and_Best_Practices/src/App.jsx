@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import AddCustomer from './AddCustomer';
 import DisplayCustomer from './DisplayCustomer';
+import EventTotals from './EventTotals';
 
 
 
@@ -8,6 +9,8 @@ function App() {
   const Mock_Api_URL = "https://64ac57549edb4181202f72fb.mockapi.io/lab_endpoint"
 
   const [customer, setCustomer] = useState([{}]);
+
+  const [totals, setTotals] = useState([])
   
   const [newCustomerName, setCustomerName] = useState('');
   
@@ -25,10 +28,12 @@ function App() {
     fetch(Mock_Api_URL)
     .then(data => data.json())
     .then(data => setCustomer(data))
+    .finally(tallyUp(customer))
   };
   
   useEffect(()=> {
     getCustomers()
+    //tallyUp(customer)
   }, [])
 
   function deleteCustomer(id){
@@ -72,12 +77,29 @@ function App() {
     }).then(() => getCustomers())
   };
 
+  function tallyUp(data){
+    
+    const tally = Object.entries(
+      data.reduce((acc, obj) => {
+        const { foodChoice } = obj;
+        acc[foodChoice] = (acc[foodChoice] || 0) + 1;
+        return acc;
+      }, {})
+    );
+    
+   
+    setTotals(tally);
+  
+    //console.log(totals);
+  }
+
 
   return (
     
     <div className="App" >
      
       <div className='row'>
+        <div className='col-md-6'>
         <AddCustomer setCustomerName={setCustomerName} 
         setCustomerFoodChoice={setCustomerFoodChoice} 
         setCustomerEvent={setCustomerEvent}
@@ -85,10 +107,15 @@ function App() {
         newCustomerName={newCustomerName}
         customerFoodChoice={customerFoodChoice}
         customerEvent={customerEvent}/>
+        </div>
+        {/* {<div className='col-md-6'>
+          <EventTotals Mock_Api_URL={Mock_Api_URL}/>
+        </div>} */}
       </div>
       
       <div>
         {customer.map((customer, index) => (
+
         <DisplayCustomer 
         key={index}
         customer={customer} 
