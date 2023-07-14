@@ -1,11 +1,9 @@
-//import React, { useEffect, useState} from 'react';
-
+//Function to display table of food choice totals
 export default function EventTotals( { totals } ){
-
-
-    
-
+   
+    //Html Output
     return(
+        <div id="table">
         <table className="table table-warning table-bordered table-striped" id="1a">
             <thead>
             <tr>
@@ -21,5 +19,6 @@ export default function EventTotals( { totals } ){
             </tr>)}
             </tbody>
         </table>
+        </div>
     )
 }

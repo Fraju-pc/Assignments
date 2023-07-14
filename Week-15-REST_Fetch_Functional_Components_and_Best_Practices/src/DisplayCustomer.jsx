@@ -1,20 +1,19 @@
+//imports
 import { useState } from 'react';
 import UpdateCustomer from './UpdateCustomer';
 
+//Display Customer function and props
 export default function DisplayCustomer({customer, index, deleteCustomer, setUpdatedCustomer, 
   setUpdatedCustomerEvent, setUpdatedFoodChoice, updateCustomer}){
 
+  //state variable to control whether the modal is visible or not  
   const [hide, setHide] = useState(false)
 
-  // const buttonClick = () => {
-  //   setHide(true);
-  //   console.log(hide);
-  // }
-
-    return(
+  //HTML Output
+  return(
         <>
         <div className='row'>
-        <div className='col-sm-6 border p-2'>
+        <div className='col-sm-6 border rounded p-2'>
         <div >
               <br></br>
               Name: {customer.name}<br></br>
@@ -24,7 +23,7 @@ export default function DisplayCustomer({customer, index, deleteCustomer, setUpd
             <br></br>
             </div>
         </div>
-      <div className='col-sm-6 border p-2'>
+      <div className='col-sm-6 border rounded p-2'>
         <h5>Delete This Customer</h5>
           <button className="btn btn-danger" onClick={() => deleteCustomer(customer.id)}>Delete</button>
         <h5>Update This Customer</h5>

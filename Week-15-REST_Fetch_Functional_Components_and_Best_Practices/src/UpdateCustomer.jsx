@@ -1,5 +1,7 @@
+//imports
 import '../src/modal.css'
 
+//Function to Update existing customer
 export default function UpdateCustomer({onClose, hide, setUpdatedCustomer, updatedCustomer, updatedFoodChoice, 
     setUpdatedFoodChoice, updatedCustomerEvent, setUpdatedCustomerEvent, updateCustomer, customer}){
 
@@ -8,6 +10,7 @@ export default function UpdateCustomer({onClose, hide, setUpdatedCustomer, updat
         return null
     }
 
+    //Html Ouput
     return(
         <>
         <div id="modal">

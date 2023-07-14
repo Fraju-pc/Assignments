@@ -1,16 +1,14 @@
-
+//Add Customer Function
 export default function AddCustomer({setCustomerName, setCustomerFoodChoice, setCustomerEvent, 
     postNewCustomer, newCustomerName, customerFoodChoice, customerEvent}){
     
+    //Function to handle submit button click    
     function handlePost(e){
-       
+        //callback function to main App
         postNewCustomer(e);
+        }
 
-        setCustomerName('')
-        setCustomerFoodChoice('')
-        setCustomerEvent('')
-
-    }
+    //HTML Output for Add Customer form
     return(
         <form>
         <h2>Add New Customer</h2>

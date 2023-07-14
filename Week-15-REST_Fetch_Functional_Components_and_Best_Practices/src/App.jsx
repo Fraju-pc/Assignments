@@ -1,51 +1,50 @@
+//Imports
 import { useEffect, useState } from 'react'
 import AddCustomer from './AddCustomer';
 import DisplayCustomer from './DisplayCustomer';
 import EventTotals from './EventTotals';
 
 
-
+//Main App Function
 function App() {
+  //Api Url
   const Mock_Api_URL = "https://64ac57549edb4181202f72fb.mockapi.io/lab_endpoint"
 
-  const [customer, setCustomer] = useState([{}]);
-
+  //state for Api pull
+  const [customer, setCustomer] = useState([]);
+  //Stat for calculating totals
   const [totals, setTotals] = useState([])
-  
+  //Stateto add new customer data
   const [newCustomerName, setCustomerName] = useState('');
-  
   const [customerFoodChoice, setCustomerFoodChoice] = useState('');
-  
   const [customerEvent, setCustomerEvent] = useState('Wedding');
-
+  
+  //state to update customer data
   const [updatedCustomer, setUpdatedCustomer] = useState('');
-  
   const [updatedFoodChoice, setUpdatedFoodChoice] = useState('');
-  
   const [updatedCustomerEvent, setUpdatedCustomerEvent] = useState('Wedding');
 
+  //Api Pull function
   async function getCustomers() {
     const response = await fetch(Mock_Api_URL)
     const data = await response.json();
     setCustomer(data);
     tallyUp(data);
-    
-    // fetch(Mock_Api_URL)
-    // .then(data => data.json())
-    // .then(data => setCustomer(data))
-    // .finally(tallyUp(customer))
   };
   
+  //Useeffect to populate the page on loadin
   useEffect(()=> {
     getCustomers()
   }, [])
 
+  //function to delete customer
   function deleteCustomer(id){
     fetch(`${Mock_Api_URL}/${id}`, {
       method: 'DELETE'
     }).then(() => getCustomers())
   };
   
+  //Function to post new customer to the Api
   function postNewCustomer(e){
     e.preventDefault();
 
@@ -63,6 +62,7 @@ function App() {
     
   };
 
+  //Function to update existing customer on the Api
   function updateCustomer(e, userObject){
     e.preventDefault();
 
@@ -81,6 +81,8 @@ function App() {
     }).then(() => getCustomers())
   };
 
+  //function to get the totals of every food choice and 
+  //set the state that is passed to the event totals Component
   function tallyUp(data){
     
     const tally = Object.entries(
@@ -90,14 +92,11 @@ function App() {
         return acc;
       }, {})
     );
-    
-   
     setTotals(tally);
-  
-    //console.log(totals);
+
   }
 
-
+  //Html Output
   return (
     
     <div className="App" >

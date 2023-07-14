@@ -1,7 +1,7 @@
-
-
+//Function to Create the Nav Bar
 export default function NavBar(){
 
+    //HTML Output
     return(
         <nav>
             <div className="logo">
@@ -10,7 +10,7 @@ export default function NavBar(){
             </div>
             
         <ul>
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Reload</a></li>
             
         </ul>
     </nav>

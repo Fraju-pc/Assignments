@@ -1,5 +1,4 @@
 /* CSS for the Modal */
-
 #modal {
     border-radius: 10px;
     position: fixed;
@@ -10,7 +9,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 #modal-content {
