@@ -1,24 +1,12 @@
-import React, { useEffect, useState} from 'react';
+//import React, { useEffect, useState} from 'react';
 
-export default function EventTotals( { Mock_Api_URL } ){
+export default function EventTotals( { totals } ){
 
-    const [data, setData] = useState([])
 
-    function getData(){
-        fetch(Mock_Api_URL)
-        .then(data => data.json())
-        .finally(data => setData(data))
-        
-      };
-      
-      useEffect(()=> {
-        getData()
-        //tallyUp(customer)
-      }, [])
     
 
     return(
-        <table id="1a">
+        <table className="table table-warning table-bordered table-striped" id="1a">
             <thead>
             <tr>
                 <th>Food Choice:</th>
@@ -26,7 +14,7 @@ export default function EventTotals( { Mock_Api_URL } ){
             </tr>
             </thead>
             <tbody>
-            {data.map(([category, count]) => 
+            {totals.map(([category, count]) => 
             <tr >
                 <td>{category}</td>
                 <td>{count}</td>

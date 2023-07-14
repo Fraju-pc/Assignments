@@ -24,16 +24,20 @@ function App() {
   
   const [updatedCustomerEvent, setUpdatedCustomerEvent] = useState('Wedding');
 
-  function getCustomers(){
-    fetch(Mock_Api_URL)
-    .then(data => data.json())
-    .then(data => setCustomer(data))
-    .finally(tallyUp(customer))
+  async function getCustomers() {
+    const response = await fetch(Mock_Api_URL)
+    const data = await response.json();
+    setCustomer(data);
+    tallyUp(data);
+    
+    // fetch(Mock_Api_URL)
+    // .then(data => data.json())
+    // .then(data => setCustomer(data))
+    // .finally(tallyUp(customer))
   };
   
   useEffect(()=> {
     getCustomers()
-    //tallyUp(customer)
   }, [])
 
   function deleteCustomer(id){
@@ -99,7 +103,7 @@ function App() {
     <div className="App" >
      
       <div className='row'>
-        <div className='col-md-6'>
+        <div className='col-md-6 p-4'>
         <AddCustomer setCustomerName={setCustomerName} 
         setCustomerFoodChoice={setCustomerFoodChoice} 
         setCustomerEvent={setCustomerEvent}
@@ -108,9 +112,9 @@ function App() {
         customerFoodChoice={customerFoodChoice}
         customerEvent={customerEvent}/>
         </div>
-        {/* {<div className='col-md-6'>
-          <EventTotals Mock_Api_URL={Mock_Api_URL}/>
-        </div>} */}
+        {<div className='col-md-6 p-4'>
+          <EventTotals totals={totals}/>
+        </div>}
       </div>
       
       <div>
