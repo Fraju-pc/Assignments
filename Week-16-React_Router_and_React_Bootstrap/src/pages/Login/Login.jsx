@@ -5,6 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useUserContext } from '../../components/UserContext'
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import NavBar from '../../components/NavBar';
 
 export default function Login(){
     //Api URL
@@ -13,8 +16,14 @@ export default function Login(){
     //State for login Form
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const { setUser } = useUserContext();
     const navigate = useNavigate();
     const [logins, setLogins] = useState('[]');
+
+    //State for Offcanvas
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     //Api Pull function
     async function getLogins() {
@@ -25,9 +34,9 @@ export default function Login(){
       console.log(logins);
     };
      //Useeffect to populate the page on loadin
-  useEffect(()=> {
-    getLogins()
-  }, [])
+      useEffect(()=> {
+        getLogins()
+      }, [])
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -48,28 +57,33 @@ export default function Login(){
       };
 
       //function to determine which page to log into
-function pageLogin(attempt){
-  console.log(attempt.name);
+      function pageLogin(attempt){
+      
   
   switch(attempt.name){
     case "Admin":
+      setUser({ username: 'admin', role: 'admin' });
       navigate(`/Admin`);
     break;
     case "Ayla":
+      setUser({ username: 'ayla', role: 'user' })
       navigate(`/ChildA`);
     break;
     case "Braiden":
+      setUser({ username: 'braiden', role: 'user' })
       navigate(`/ChildB`);
     break;
     case "Callan":
+      setUser({ username: 'callan', role: 'user' })
       navigate(`/ChildC`);
     break;
     case "Delaney":
+      setUser({ username: 'delaney', role: 'user' })
       navigate(`/ChildD`);
     break;
     //default for bad Username / Password Combo
     default:
-      alert("Username or Password Not Found");
+      handleShow();
       //myModal.show();
       //location.reload();
       
@@ -78,7 +92,9 @@ function pageLogin(attempt){
     
     //HTML Output
     return (
-      <Container>
+      <>
+      <NavBar />  
+      <Container className='p-4'>
         <Row>
           <Col></Col>
           <Col>
@@ -107,6 +123,16 @@ function pageLogin(attempt){
           </Col>
           <Col></Col>
         </Row>
+        <Offcanvas bg="dark" data-bs-theme="dark" show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Error!</Offcanvas.Title>
+              </Offcanvas.Header>
+                <Offcanvas.Body>
+                Invalid Username or Password.
+                </Offcanvas.Body>
+      </Offcanvas>
+
       </Container>
+      </>
     );
 }

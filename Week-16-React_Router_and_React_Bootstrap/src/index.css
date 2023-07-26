@@ -1,4 +1,14 @@
 body {
-    background-color: #807d7f;
+    background-color: #4b5b40;
     padding: 0;
 }
+
+footer {
+    position: fixed;
+    /* background-color: gray; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    text-align: center;
+  }
