@@ -96,8 +96,8 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
   return (
     <Container>
       <Row className="m-4 p-4">
-        <Col></Col>
-        <Col id="form-area" className="m-3 p-3">
+        <Col xs={1} md={3}></Col>
+        <Col xs={10} md={6} id="form-area" className="m-3 p-3">
           <h1 id="text-header">Add New Task:</h1>
           <Form>
             <Form.Label id="text-header">User Name:</Form.Label>
@@ -136,7 +136,7 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
             </Button>
           </Form>
         </Col>
-        <Col></Col>
+        <Col xs={1} md={3}></Col>
       </Row>
       <Row className="m-4 p-3">
         <Col>

@@ -20,7 +20,7 @@ export default function DisplayTableRow({ log, deleteUser, username, password,
       <td>{log.password}</td>
       
       <td>
-      <Button variant="warning" onClick={handleShow}>
+      <Button variant="success" onClick={handleShow}>
         Update
       </Button>
       <Modal show={show} onHide={handleClose} animation={false}>

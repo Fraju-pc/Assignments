@@ -104,12 +104,13 @@ export default function Users() {
     <>
       <Container className="p-4">
         <Row className="m-4 p-1">
-          <Col></Col>
-          <Col>
-            <h1>Add New User:</h1>
+          <Col xs={2} md={3}></Col>
+          <Col id="form-area" className="m-3 p-3" xs={8} md={6}>
+          <div >
+            <h1 id="text-header">Add New User:</h1>
             <Form onSubmit={addUser}>
               <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>User Name</Form.Label>
+                <Form.Label id="text-header">User Name</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Enter User Name"
@@ -118,7 +119,7 @@ export default function Users() {
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
+                <Form.Label id="text-header">Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Password"
@@ -130,11 +131,13 @@ export default function Users() {
                 Submit
               </Button>
             </Form>
+            </div>
           </Col>
-          <Col></Col>
+          <Col xs={2} md={3}></Col>
         </Row>
         <Row className="m-4 p-1">
-          <Table striped bordered hover variant="dark">
+          <div className="round-corners">
+          <Table id="table" striped bordered hover variant="dark">
             <thead>
               <tr>
                 <th>User:</th>
@@ -159,6 +162,7 @@ export default function Users() {
               
             </tbody>
           </Table>
+          </div>
         </Row>
       </Container>
     </>

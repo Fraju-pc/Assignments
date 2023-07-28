@@ -21,8 +21,8 @@ footer {
 
   .round-corners {
     overflow: hidden;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     border-radius: 10px;
     box-shadow: 10px 5px 5px#1b2b1b;
   }

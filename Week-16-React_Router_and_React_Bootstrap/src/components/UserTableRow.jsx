@@ -16,7 +16,7 @@ export default function DisplayTableRow({ chore }) {
       <td>{chore.date}</td>
       <td>{chore.task}</td>
       <td>
-      <Button variant="warning" onClick={() => EmailAdmin(chore={chore})}>
+      <Button variant="success" onClick={() => EmailAdmin(chore={chore})}>
         Done
       </Button>
      
