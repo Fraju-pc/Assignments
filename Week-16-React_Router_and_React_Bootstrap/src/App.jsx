@@ -13,7 +13,8 @@ import ChildD from './pages/ChildD/ChildD'
 import Users from './pages/Users/Users'
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import './index.css'
+
 
 function App() {
    //Api URL
@@ -24,7 +25,7 @@ function App() {
     async function getChores() {
       const response = await fetch(Chores_Api_URL)
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       setChores(data)
       //console.log(chores);
     };

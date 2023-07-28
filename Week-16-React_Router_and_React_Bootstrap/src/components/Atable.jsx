@@ -14,7 +14,7 @@ export default function Atable({chores,
     updatedTask
 }) {
   return (
-    <Table striped bordered hover variant="dark">
+    <Table id="table" striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>Ayla's Tasks</th>

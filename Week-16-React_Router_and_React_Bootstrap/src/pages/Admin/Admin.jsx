@@ -97,10 +97,10 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
     <Container>
       <Row className="m-4 p-4">
         <Col></Col>
-        <Col className="border rounded m-4 p-4">
-          <h1>Add New Task:</h1>
+        <Col id="form-area" className="m-3 p-3">
+          <h1 id="text-header">Add New Task:</h1>
           <Form>
-            <Form.Label>User Name:</Form.Label>
+            <Form.Label id="text-header">User Name:</Form.Label>
             <Form.Select
               className="mb-3"
               aria-label="Select User"
@@ -114,7 +114,7 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
               <option value="Delaney">Delaney</option>
             </Form.Select>
             <Form.Group className="mb-3" controlId="formBasicText">
-              <Form.Label>Task:</Form.Label>
+              <Form.Label id="text-header">Task:</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Task"
@@ -122,7 +122,7 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
                 onChange={(e) => setTask(e.target.value)}
               />
             </Form.Group>
-            <Form.Label>Date Assigned:</Form.Label>
+            <Form.Label id="text-header">Date Assigned:</Form.Label>
             <Form.Group className="mb-3" controlId="formBasicText">
               <Form.Control
                 type="date"
@@ -138,8 +138,9 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
         </Col>
         <Col></Col>
       </Row>
-      <Row className="mt-4 p-2">
+      <Row className="m-4 p-3">
         <Col>
+          <div className="round-corners">
         <Atable 
             chores={chores}
             deleteTask={deleteTask}
@@ -151,8 +152,10 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
             setUdate={setUdate}
             updatedTask={updatedTask}
         />
+        </div>
         </Col>
-      <Col>
+      <Col >
+      <div className="round-corners">
       <Btable 
             chores={chores}
             deleteTask={deleteTask}
@@ -164,10 +167,12 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
             setUdate={setUdate}
             updatedTask={updatedTask}
         />
+        </div>
         </Col>
       </Row>
-      <Row className="mt-4 p-2">
+      <Row className="m-4 p-3">
         <Col>
+        <div className="round-corners">
       <Ctable 
             chores={chores}
             deleteTask={deleteTask}
@@ -179,8 +184,10 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
             setUdate={setUdate}
             updatedTask={updatedTask}
         />
+        </div>
         </Col>
      <Col>
+     <div className="round-corners">
       <Dtable 
             chores={chores}
             deleteTask={deleteTask}
@@ -192,6 +199,7 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
             setUdate={setUdate}
             updatedTask={updatedTask}
         />
+        </div>
         </Col>
       </Row>
       

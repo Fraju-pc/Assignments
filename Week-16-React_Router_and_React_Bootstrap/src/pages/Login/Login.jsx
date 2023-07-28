@@ -18,7 +18,7 @@ export default function Login(){
     const [password, setPassword] = useState('');
     const { setUser } = useUserContext();
     const navigate = useNavigate();
-    const [logins, setLogins] = useState('[]');
+    const [logins, setLogins] = useState([]);
 
     //State for Offcanvas
     const [show, setShow] = useState(false);

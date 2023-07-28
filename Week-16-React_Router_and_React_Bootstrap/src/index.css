@@ -1,5 +1,5 @@
 body {
-    background-color: #4b5b40;
+    background: radial-gradient(#895d8b, #4e545b);
     padding: 0;
 }
 
@@ -11,4 +11,35 @@ footer {
     right: 0;
     padding: 8px;
     text-align: center;
+  }
+
+  #nav {
+    background-color: #1b2b1b;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px#4e545b;
+  }
+
+  .round-corners {
+    overflow: hidden;
+    margin: auto;
+    padding: auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px#1b2b1b;
+  }
+
+  #form-area {
+    background-color: #4e545b;
+    overflow: hidden;
+    margin: auto;
+    padding: auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px#1b2b1b;
+  }
+
+  #table{
+    margin-bottom: 0;
+  }
+
+  #text-header {
+    color: #ff8e51;
   }

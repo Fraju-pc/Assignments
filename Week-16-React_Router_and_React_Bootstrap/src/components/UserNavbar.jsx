@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { useUserContext } from "./UserContext";
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
@@ -16,7 +16,7 @@ const AdminNavbar = () => {
       navigate('/');
     };
   return (
-    <Navbar className="p-3" bg="dark" data-bs-theme="dark" expand="lg">
+    <Navbar id="nav" className="p-3" data-bs-theme="dark" expand="lg">
       <Navbar.Brand>
         House Chores
       </Navbar.Brand>

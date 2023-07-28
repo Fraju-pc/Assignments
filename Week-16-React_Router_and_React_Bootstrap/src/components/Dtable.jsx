@@ -14,7 +14,7 @@ export default function Dtable({chores,
     updatedTask
 }) {
   return (
-    <Table striped bordered hover variant="dark">
+    <Table id="table" striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>Delaney's Tasks</th>

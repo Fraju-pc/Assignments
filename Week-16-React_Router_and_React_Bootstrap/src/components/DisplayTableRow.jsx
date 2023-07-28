@@ -16,7 +16,7 @@ export default function DisplayTableRow({ chore, deleteTask, uuser, utask, udate
       <td>{chore.date}</td>
       <td>{chore.task}</td>
       <td>
-      <Button variant="warning" onClick={() => setModalShow(true)}>
+      <Button variant="success" onClick={() => setModalShow(true)}>
         Update
       </Button>
 

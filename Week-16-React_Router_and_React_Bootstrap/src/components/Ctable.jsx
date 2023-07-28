@@ -14,7 +14,7 @@ export default function Ctable({chores,
     updatedTask
 }) {
   return (
-    <Table striped bordered hover variant="dark">
+    <Table id="table" striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>Callan's Tasks</th>
