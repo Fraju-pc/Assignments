@@ -3,10 +3,7 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-//import Table from 'react-bootstrap/Table';
 import React, { useState } from "react";
-//import DisplayTableRow from "../../components/DisplayTableRow";
-//import filterByName from "../../components/filterByName";
 import Atable from "../../components/Atable";
 import Btable from "../../components/Btable";
 import Ctable from "../../components/Ctable";
@@ -22,76 +19,72 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
   const [udate, setUdate] = useState("");
 
   const addTask = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-        const response = await fetch(Chores_Api_URL, {
-         method: 'POST',
-         headers: {
-           'Content-Type': 'application/json'
-           },
-           body: JSON.stringify({
-            name: user,
-            task: task,
-            date: date
-            })
-         });
-         const data = await response.json();
-          //logic when the Post is successful
-         console.log(data);
-         getChores();
-         setUser('');
-         setTask('');
-         setDate('');
-       } catch(error) {
-     //logic for when there is an error
-     console.log(error)
-         } 
+      const response = await fetch(Chores_Api_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: user,
+          task: task,
+          date: date,
+        }),
+      });
+      const data = await response.json();
+      //logic when the Post is successful
+      console.log(data);
+      getChores();
+      setUser("");
+      setTask("");
+      setDate("");
+    } catch (error) {
+      //logic for when there is an error
+      console.log(error);
     }
-    const deleteTask = async (e, id) => {
-      e.preventDefault()
-      try {
-          const response = await fetch(`${Chores_Api_URL}/${id}`, {
-            method: 'DELETE'
-          });
-           const data = await response.json();
-            //logic when the delete is successful
-           console.log(data);
-           getChores();
-           
-         } catch(error) {
-       //logic for when there is an error
-       console.log(error)
-           } 
-      }
-      const updatedTask = async (e, id) => {
-        e.preventDefault()
-        try {
-            const response = await fetch(`${Chores_Api_URL}/${id}`, {
-             method: 'PUT',
-             headers: {
-               'Content-Type': 'application/json'
-               },
-               body: JSON.stringify({
-                name: uuser,
-                task: utask,
-                date: udate
-                })
-             });
-             const data = await response.json();
-              //logic when the Put is successful
-             console.log(data);
-             getChores();
-             setUuser('');
-             setUtask('');
-             setUdate('');
-
-           } catch(error) {
-         //logic for when there is an error
-         console.log(error)
-             } 
-        }
-        
-
+  };
+  const deleteTask = async (e, id) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`${Chores_Api_URL}/${id}`, {
+        method: "DELETE",
+      });
+      const data = await response.json();
+      //logic when the delete is successful
+      console.log(data);
+      getChores();
+    } catch (error) {
+      //logic for when there is an error
+      console.log(error);
+    }
+  };
+  const updatedTask = async (e, id) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`${Chores_Api_URL}/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: uuser,
+          task: utask,
+          date: udate,
+        }),
+      });
+      const data = await response.json();
+      //logic when the Put is successful
+      console.log(data);
+      getChores();
+      setUuser("");
+      setUtask("");
+      setUdate("");
+    } catch (error) {
+      //logic for when there is an error
+      console.log(error);
+    }
+  };
 
   return (
     <Container>
@@ -139,70 +132,69 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
         <Col xs={1} md={3}></Col>
       </Row>
       <Row className="m-4 p-3">
-        <Col>
+        <Col className="m-3">
           <div className="round-corners">
-        <Atable 
-            chores={chores}
-            deleteTask={deleteTask}
-            uuser={uuser}
-            utask={utask}
-            udate={udate}
-            setUuser={setUuser}
-            setUtask={setUtask}
-            setUdate={setUdate}
-            updatedTask={updatedTask}
-        />
-        </div>
+            <Atable
+              chores={chores}
+              deleteTask={deleteTask}
+              uuser={uuser}
+              utask={utask}
+              udate={udate}
+              setUuser={setUuser}
+              setUtask={setUtask}
+              setUdate={setUdate}
+              updatedTask={updatedTask}
+            />
+          </div>
         </Col>
-      <Col >
-      <div className="round-corners">
-      <Btable 
-            chores={chores}
-            deleteTask={deleteTask}
-            uuser={uuser}
-            utask={utask}
-            udate={udate}
-            setUuser={setUuser}
-            setUtask={setUtask}
-            setUdate={setUdate}
-            updatedTask={updatedTask}
-        />
-        </div>
+        <Col className="m-3">
+          <div className="round-corners">
+            <Btable
+              chores={chores}
+              deleteTask={deleteTask}
+              uuser={uuser}
+              utask={utask}
+              udate={udate}
+              setUuser={setUuser}
+              setUtask={setUtask}
+              setUdate={setUdate}
+              updatedTask={updatedTask}
+            />
+          </div>
         </Col>
       </Row>
       <Row className="m-4 p-3">
-        <Col>
-        <div className="round-corners">
-      <Ctable 
-            chores={chores}
-            deleteTask={deleteTask}
-            uuser={uuser}
-            utask={utask}
-            udate={udate}
-            setUuser={setUuser}
-            setUtask={setUtask}
-            setUdate={setUdate}
-            updatedTask={updatedTask}
-        />
-        </div>
+        <Col className="m-3">
+          <div className="round-corners">
+            <Ctable
+              chores={chores}
+              deleteTask={deleteTask}
+              uuser={uuser}
+              utask={utask}
+              udate={udate}
+              setUuser={setUuser}
+              setUtask={setUtask}
+              setUdate={setUdate}
+              updatedTask={updatedTask}
+            />
+          </div>
         </Col>
-     <Col>
-     <div className="round-corners">
-      <Dtable 
-            chores={chores}
-            deleteTask={deleteTask}
-            uuser={uuser}
-            utask={utask}
-            udate={udate}
-            setUuser={setUuser}
-            setUtask={setUtask}
-            setUdate={setUdate}
-            updatedTask={updatedTask}
-        />
-        </div>
+        <Col className="m-3">
+          <div className="round-corners">
+            <Dtable
+              chores={chores}
+              deleteTask={deleteTask}
+              uuser={uuser}
+              utask={utask}
+              udate={udate}
+              setUuser={setUuser}
+              setUtask={setUtask}
+              setUdate={setUdate}
+              updatedTask={updatedTask}
+            />
+          </div>
         </Col>
       </Row>
-      
     </Container>
   );
 }

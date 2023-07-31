@@ -3,11 +3,17 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import filterByName from '../../components/filterByName';
 import UserTableRow from '../../components/UserTableRow';
+import { Col } from 'react-bootstrap';
 
 
 export default function ChildA({chores}) {
   return (
     <Container>
+      <Row>
+        <Col className="p-3 m-4" id="form-area"><h1 id="text-header">Ayla's Tasks:</h1></Col>
+        <Col></Col>
+        <Col></Col>
+      </Row>
         <Row className='m-3 p-3'>
           <div className='round-corners'>
     <Table id="table" striped bordered hover variant="dark">
