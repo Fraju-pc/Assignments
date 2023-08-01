@@ -18,7 +18,8 @@ export default function ChildB({chores}) {
         <Col></Col>
       </Row>
         <Row className='m-3 p-3'>
-    <Table striped bordered hover variant="dark">
+        <div className="round-corners">
+    <Table id="table" striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>Braiden's Tasks</th>
@@ -36,6 +37,7 @@ export default function ChildB({chores}) {
         ))}
       </tbody>
     </Table>
+    </div>
     </Row>
     </Container>
   );
