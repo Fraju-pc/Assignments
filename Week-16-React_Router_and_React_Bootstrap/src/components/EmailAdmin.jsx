@@ -1,4 +1,4 @@
-    
+//Function that sends email when task complete button is pressed    
 export default function EmailAdmin({chore}){
     //portion that sends the email
     window.Email.send({

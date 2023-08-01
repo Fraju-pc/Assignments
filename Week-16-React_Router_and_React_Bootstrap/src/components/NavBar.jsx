@@ -1,8 +1,12 @@
+//Imports
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+//Default Nav Bar
 const NavBar = () => {
+
+  //Html Output
   return (
     <Navbar id="nav" className="p-3" data-bs-theme="dark" expand="lg">
       <Navbar.Brand>

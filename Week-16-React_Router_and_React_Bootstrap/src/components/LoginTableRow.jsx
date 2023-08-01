@@ -1,34 +1,42 @@
+//Imports
 import { Button } from "react-bootstrap";
 import { useState } from "react";
-import Modal from 'react-bootstrap/Modal';
+import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-
-export default function DisplayTableRow({ log, deleteUser, username, password,  
-  setUsername, setPassword, updatedUser}) {
-  
+//Table Row Function
+export default function DisplayTableRow({
+  log,
+  deleteUser,
+  username,
+  password,
+  setUsername,
+  setPassword,
+  updatedUser,
+}) {
 
   //Modal State
   const [show, setShow] = useState(false);
 
+  //Open / Close Modal functions
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  //Html Output
   return (
-    
     <tr>
       <td>{log.name}</td>
       <td>{log.password}</td>
-      
       <td>
-      <Button variant="success" onClick={handleShow}>
-        Update
-      </Button>
-      <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>Update User</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <Form>
+        <Button variant="success" onClick={handleShow}>
+          Update
+        </Button>
+        <Modal show={show} onHide={handleClose} animation={false}>
+          <Modal.Header closeButton>
+            <Modal.Title>Update User</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label>User Name</Form.Label>
                 <Form.Control
@@ -47,22 +55,22 @@ export default function DisplayTableRow({ log, deleteUser, username, password,
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Group>
-              
             </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="warning" onClick={(e) => updatedUser(e, log.id)}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-            
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="warning" onClick={(e) => updatedUser(e, log.id)}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </td>
       <td>
-        <Button variant="danger" onClick={(e) => deleteUser(e, log.id)}>Delete</Button>
+        <Button variant="danger" onClick={(e) => deleteUser(e, log.id)}>
+          Delete
+        </Button>
       </td>
     </tr>
   );

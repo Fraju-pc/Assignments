@@ -1,18 +1,22 @@
-import Table from 'react-bootstrap/Table';
-import filterByName from './filterByName';
-import DisplayTableRow from './DisplayTableRow';
+//Imports
+import Table from "react-bootstrap/Table";
+import filterByName from "./filterByName";
+import DisplayTableRow from "./DisplayTableRow";
 
-
-export default function Dtable({chores,
-    deleteTask,
-    uuser,
-    utask,
-    udate,
-    setUuser,
-    setUtask,
-    setUdate,
-    updatedTask
+//Delaney's Table
+export default function Dtable({
+  chores,
+  deleteTask,
+  uuser,
+  utask,
+  udate,
+  setUuser,
+  setUtask,
+  setUdate,
+  updatedTask,
 }) {
+
+  //Html Output
   return (
     <Table id="table" striped bordered hover variant="dark">
       <thead>

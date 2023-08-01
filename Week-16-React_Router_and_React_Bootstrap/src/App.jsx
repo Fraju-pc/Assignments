@@ -1,3 +1,4 @@
+//Imports
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useUserContext } from '../src/components/UserContext';
@@ -14,28 +15,32 @@ import Users from './pages/Users/Users'
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css'
+import './scrollbar.css'
 
-
+//Main App
 function App() {
+
    //Api URL
    const Chores_Api_URL = 'https://6489d1fc5fa58521cab04f75.mockapi.io/ChoreDb'
-  const [chores, setChores] = useState([]);
+   const [chores, setChores] = useState([]);
 
     //Api Pull function
     async function getChores() {
       const response = await fetch(Chores_Api_URL)
       const data = await response.json();
-      //console.log(data);
       setChores(data)
-      //console.log(chores);
+      
     };
-     //Useeffect to pull data on loadin
-      useEffect(()=> {
-        getChores()
-      }, [])
-      //Context for Navbar
-      const { user } = useUserContext();
 
+    //Useeffect to pull data on loadin
+    useEffect(()=> {
+        getChores()
+    }, [])
+    
+    //Context for Navbar
+    const { user } = useUserContext();
+
+  //Html Output
   return (
     <>
       <Router>

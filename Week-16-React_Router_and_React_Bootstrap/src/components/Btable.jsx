@@ -1,8 +1,9 @@
+//Imports
 import Table from 'react-bootstrap/Table';
 import filterByName from './filterByName';
 import DisplayTableRow from './DisplayTableRow';
 
-
+//Braiden's Table
 export default function Btable({chores,
     deleteTask,
     uuser,
@@ -13,6 +14,8 @@ export default function Btable({chores,
     setUdate,
     updatedTask
 }) {
+
+  //Html Output
   return (
     <Table id="table" striped bordered hover variant="dark">
       <thead>

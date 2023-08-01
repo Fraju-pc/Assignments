@@ -1,8 +1,10 @@
+/* main background color */
 body {
     background: radial-gradient(#895d8b, #4e545b);
     padding: 0;
 }
 
+/* footer settings */
 footer {
     position: fixed;
     /* background-color: gray; */
@@ -13,12 +15,14 @@ footer {
     text-align: center;
   }
 
+  /* Nav bar settings */
   #nav {
     background-color: #1b2b1b;
     border-radius: 10px;
     box-shadow: 10px 5px 5px#4e545b;
   }
 
+  /* Rounding for Tables */
   .round-corners {
     overflow: hidden;
     margin: 0;
@@ -27,6 +31,12 @@ footer {
     box-shadow: 10px 5px 5px#1b2b1b;
   }
 
+  /* Removing the default table margin */
+  #table{
+  margin-bottom: 0;
+  }
+
+  /* Page Headers on Task/User Management */
   #form-area {
     background-color: #4e545b;
     overflow: hidden;
@@ -36,10 +46,7 @@ footer {
     box-shadow: 10px 5px 5px#1b2b1b;
   }
 
-  #table{
-    margin-bottom: 0;
-  }
-
+  /* Color for header Text */
   #text-header {
     color: #ff8e51;
   }

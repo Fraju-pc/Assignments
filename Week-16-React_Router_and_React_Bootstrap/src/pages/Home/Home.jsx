@@ -1,3 +1,4 @@
+//Imports
 import "./homeImage.jpg"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -7,12 +8,18 @@ import Image from 'react-bootstrap/Image';
 import { Link, useNavigate } from 'react-router-dom';
 import NavBar from "../../components/NavBar";
 
+//Home Page
 export default function Home(){
-    const navigate = useNavigate();
 
+//Setup Navigate
+const navigate = useNavigate();
+
+//Function for Log In Button
 function goLogin(){
     navigate(`/Login`);
 };
+
+    //Html Output
     return(
         <>
         <NavBar />  

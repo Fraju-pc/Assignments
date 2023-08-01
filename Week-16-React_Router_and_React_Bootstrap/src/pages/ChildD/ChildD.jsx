@@ -1,3 +1,4 @@
+//Imports
 import Table from 'react-bootstrap/Table';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -5,8 +6,10 @@ import { Col } from 'react-bootstrap';
 import filterByName from '../../components/filterByName';
 import UserTableRow from '../../components/UserTableRow';
 
-
+//Delaney's Page
 export default function ChildD({chores}) {
+
+  //Html Output
   return (
     <Container>
       <Row>

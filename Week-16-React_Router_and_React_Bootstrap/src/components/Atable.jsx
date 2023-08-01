@@ -14,7 +14,7 @@ export default function Atable({chores,
     updatedTask
 }) {
   return (
-    <Table id="table" striped bordered hover variant="dark">
+    <Table id="table" striped bordered hover variant="dark" className='scrollbar scrollbar-success'>
       <thead>
         <tr>
           <th>Ayla's Tasks</th>

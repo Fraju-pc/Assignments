@@ -134,6 +134,7 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
       <Row className="m-4 p-3">
         <Col className="m-3">
           <div className="round-corners">
+          <div className="scrollbar scrollbar-success">
             <Atable
               chores={chores}
               deleteTask={deleteTask}
@@ -146,9 +147,11 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
               updatedTask={updatedTask}
             />
           </div>
+          </div>
         </Col>
         <Col className="m-3">
           <div className="round-corners">
+            <div className="scrollbar scrollbar-success">
             <Btable
               chores={chores}
               deleteTask={deleteTask}
@@ -160,12 +163,14 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
               setUdate={setUdate}
               updatedTask={updatedTask}
             />
+            </div>
           </div>
         </Col>
       </Row>
       <Row className="m-4 p-3">
         <Col className="m-3">
           <div className="round-corners">
+          <div className="scrollbar scrollbar-success">
             <Ctable
               chores={chores}
               deleteTask={deleteTask}
@@ -178,9 +183,11 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
               updatedTask={updatedTask}
             />
           </div>
+          </div>
         </Col>
         <Col className="m-3">
           <div className="round-corners">
+          <div className="scrollbar scrollbar-success">
             <Dtable
               chores={chores}
               deleteTask={deleteTask}
@@ -192,6 +199,7 @@ export default function Admin({ chores, getChores, Chores_Api_URL }) {
               setUdate={setUdate}
               updatedTask={updatedTask}
             />
+          </div>
           </div>
         </Col>
       </Row>

@@ -137,6 +137,7 @@ export default function Users() {
         </Row>
         <Row className="m-4 p-1">
           <div className="round-corners">
+          <div className="scrollbar scrollbar-success">
           <Table id="table" striped bordered hover variant="dark">
             <thead>
               <tr>
@@ -162,6 +163,7 @@ export default function Users() {
               
             </tbody>
           </Table>
+          </div>
           </div>
         </Row>
       </Container>
