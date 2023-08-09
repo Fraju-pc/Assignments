@@ -7,10 +7,15 @@ import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import { Link, useNavigate } from 'react-router-dom';
 import NavBar from "../../components/NavBar";
+import { useUserContext } from "../../components/UserContext";
+import { useEffect } from "react";
 
 //Home Page
 export default function Home(){
 
+  //Setup Context
+  const { user, logout } = useUserContext(); 
+    
 //Setup Navigate
 const navigate = useNavigate();
 
@@ -18,6 +23,17 @@ const navigate = useNavigate();
 function goLogin(){
     navigate(`/Login`);
 };
+
+  //Log Out Button Function
+  const handleLogout = () => {
+    logout();
+    
+  };
+
+    //Useeffect to log out of context on loadin
+    useEffect(()=> {
+        handleLogout()
+    }, [])
 
     //Html Output
     return(
